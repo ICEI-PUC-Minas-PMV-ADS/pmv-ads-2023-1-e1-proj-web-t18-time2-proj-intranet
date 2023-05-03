@@ -1,4 +1,5 @@
-# TÍTULO DO PROJETO
+# Intranet destinada a Micro e Pequenas empresas 
+
 
 `CURSO`
 
