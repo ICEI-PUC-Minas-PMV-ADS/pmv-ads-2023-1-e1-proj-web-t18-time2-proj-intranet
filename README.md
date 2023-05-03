@@ -1,24 +1,27 @@
 # Intranet destinada a Micro e Pequenas empresas 
 
 
-`CURSO`
+`Análise e desenvolvimento de sistemas`
 
-`DISCIPLINA`
+`Projeto`
 
-`SEMESTRE`
+`1º SEMESTRE`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O grande avanço da agilidade oriunda dos meios digitais faz com que todos os empresários tenham uma gestão em tempo real do seu negócio. O fato de não conseguir realizar uma comunicação interna em uma empresa pode fazer com que uma empresa perca oportunidades e gere prejuízo. Diante disto são as micro e pequenas empresas e os microempreendedores que mais carecem de uma ferramenta para auxiliar na adminsitração do seu negócio. 
+
+O objetivo geral deste trabalho é a criação de um modelo de intranet simplificado e facilmente customizável que possibilite que o empreendedor consiga centralizar e gerir, de forma sistematizada, grande parte das funções e tarefas da empresa. 
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Luan de Alcântara Alves
+* Mayara da Rocha Pinheiro
+* Rafael Gonçalves Vitolo
+* Leonidas Felipe Soares
+* Ana Gabrielle Rosa
 
 ## Orientador
 
-* Nome completo do professor 1
+* Clovis Lemos Tavares
 
 ## Instruções de utilização
 
