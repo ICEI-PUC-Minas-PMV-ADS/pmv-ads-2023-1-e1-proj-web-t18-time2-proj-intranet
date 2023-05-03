@@ -3,9 +3,9 @@
 
 `Análise e desenvolvimento de sistemas`
 
-`Projeto`
+`Projeto Web`
 
-`1º SEMESTRE`
+`1º semestre de 2023`
 
 O grande avanço da agilidade oriunda dos meios digitais faz com que todos os empresários tenham uma gestão em tempo real do seu negócio. O fato de não conseguir realizar uma comunicação interna em uma empresa pode fazer com que uma empresa perca oportunidades e gere prejuízo. Diante disto são as micro e pequenas empresas e os microempreendedores que mais carecem de uma ferramenta para auxiliar na adminsitração do seu negócio. 
 
