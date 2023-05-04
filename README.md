@@ -3,7 +3,7 @@
 
 `Análise e desenvolvimento de sistemas`
 
-`Projeto Web`
+`Projeto desenvolvimento Web`
 
 `1º semestre de 2023`
 
