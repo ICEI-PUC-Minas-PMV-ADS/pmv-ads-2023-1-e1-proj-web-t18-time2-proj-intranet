@@ -1,155 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Intranet Corporativa - Home Page</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="login.js"></script>
+    <script>
+        if (!usuarioCorrente.login) {
+            window.location.href = LOGIN_URL;
+        }
+
+        function exibeUsuarios() {
+            let Listausuarios = '';
+            for (i - 0; i < db_usuarios.usuarios.legth; i++) {
+                let usuarioo = db_usuarios.usuarios[i];
+                Listausuarios += `<tr><td scope="row">${usuario.nome}</td><td>${usuario.login}</td><td>${usuario.email}</td></tr>`;
+            }
+
+            document.getElementById("table-usuarios").innerHTML = Listausuarios
+        }
+
+        function initPage() {
+            document.getElementById('btn_logout').addEventListener('click', logoutUser);
+
+            document.getElementById('nomeUsuario').innerHTML = usuarioCorrente.nome;
+
+            exibeUsuarios();
+        }
+
+        window.addEventListener('load', initPage);
+    </script>
+
 </head>
 
 <body>
-     <!-- Header -->
-     <header>
-        <div class="logo-container">
-            <img src="caminho/para/logo.png" alt="Logo da empresa">
-        </div>
-        <h1>Bem-vindo à Intranet Corporativa</h1>
+    <noscript>  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MS2BNB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <dxmlnsiv class="wrap">
+    <header class="header" id="frame-panel">
+  <a href="https://www.templatemonster.com/pt-br/free-templates/design-studio-website-template-51688.html" class="back-to-product">
+    
   
-        <div class="date">
-            <script>document.write(new Date().toLocaleDateString());</script>
-          </div>
-          
-    </header>
-      
-    <nav>
-      <ul>
-          <li><a href="index.html">Início</a></li>
-          <li><a href="gestao-de-pessoas.html">Gestão de Pessoas</a></li>
-          <li><a href="financeiro.html">Financeiro</a></li>
-          <li><a href="marketing.html">Marketing</a></li>
-          <li><a href="donwload.html">Dowmloads</a></li>
-          <li><a href="contatos.html">Contatos</a></li>
-          <li><a href="configuracoes.html">Configurações</a></li>
-      </ul>
-  </nav>
+    
+    
+      <iframe class="frame" src="https://livedemo00.template-help.com/wt_51688" width="100%" height="400px" title="Pré-visualizar" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-popups"></iframe>          </div>
+  </section>
+  </div>
+  <script type="application/ld+json">
+
+</script>
+  <script type="text/javascript">
+  window.__app__ = window.__app__ || {};
+  window.__app__ = {"language":"pt-br","apiLocale":"pt","analytics":{"pageType":"Type"},"js":{"cookieDomain":".templatemonster.com","liveDemoDomain":"\/\/demo.templatemonster.com\/","fontPreviewDomain":"\/\/s3f.tmimgcdn.com\/","domain":"https:\/\/www.templatemonster.com","api":{"f1":"https:\/\/www.templatemonster.com\/f1\/api","products":"https:\/\/api.templatemonster.com\/products","pages":"https:\/\/api.templatemonster.com\/pages","navigations":"https:\/\/api.templatemonster.com\/navigations","properties":"https:\/\/api.templatemonster.com\/properties","authors":"https:\/\/api.templatemonster.com\/authors","currencies":"https:\/\/api.templatemonster.com\/currencies","reviews":"https:\/\/api.templatemonster.com\/reviews","collection":"https:\/\/api.templatemonster.com\/collection","carts":"https:\/\/api.templatemonster.com\/carts","users":"https:\/\/api.templatemonster.com\/users","payment-clients":"https:\/\/api.templatemonster.com\/payment-clients","promos":"https:\/\/api.templatemonster.com\/promos","services":"https:\/\/api.templatemonster.com\/services","licenses":"https:\/\/api.templatemonster.com\/licenses","support":"https:\/\/api.templatemonster.com\/support","orders":"https:\/\/api.templatemonster.com\/orders","discounts":"https:\/\/api.templatemonster.com\/discounts","mailer":"https:\/\/api.templatemonster.com\/mailer","marketplace-services":"https:\/\/api.templatemonster.com\/marketplace-services","consul":"https:\/\/api.templatemonster.com","tickets":"https:\/\/api.templatemonster.com\/tickets"},"revive":{"url":"https:\/\/r5.templatemonster.com\/dl\/1asyncjs.php","zoneId":2,"hash":"5744eda1a89c46c055297f86d855c494"},"recaptchaSiteKey":"6LeaeVAdAAAAALs6W5unPcr6EWXTc5ZYpy4Irks3","centrifuge":"wss:\/\/socket.templatemonster.com","stripe":{"stripePublicKey":"pk_live_H5qyFec6DCp3zddA8UkTb5aE","stripeId":"59d3a31deebec520e279c65e"},"consulUrl":"http:\/\/api.templatemonster.com","currency":{"code":"BRL","rate":4.98411},"abExperimentId":"onXrMvNZTaCOEEeGi6eIPA","abExperimentInit":false}};
+</script><script type="text/javascript" id="">(function(){function h(b,a,d){b=b+"\x3d"+a+"; path\x3d/; domain\x3d."+location.hostname.replace(/^www\./i,"");"undefined"!==typeof d&&(a=new Date,a.setTime(a.getTime()+d),b+="; expires\x3d"+a.toUTCString());document.cookie=b}function k(b){for(var a=document.cookie.split(";"),d,f=0;f<a.length;f++){var g=a[f].trim();0===g.indexOf(b+"\x3d")&&(d=g.substring((b+"\x3d").length,g.length))}return d}var e=k("aff"),c=new URLSearchParams(window.location.search);(c=c.get("aff"))||(c="TM");e||(e="TM"===c.toUpperCase()?
+31536E8:5184E6,h("aff",c,e));k("ref")||(e=btoa(document.referrer?document.referrer:window.location.href),h("ref",e));c&&"TM"!==c.toUpperCase()&&(window.dataLayer=window.dataLayer||[],window.dataLayer.push({event:"trackAffiliate"}))})();</script>
+      <script src="//www.templatemonster.com/assets/js/commons-02ce821f8e561887214d.js" async="async"></script>
+<script src="//www.templatemonster.com/assets/js/demo-c766353b165bdc8950fb.js" async="async"></script>
+<script>window.addEventListener('load', function() {
+window.dataLayer = window.dataLayer || []; window.dataLayer.push({"pageType":"Cross-page","portalName":"All","portalContent":"All","categoryName":"Other","authorGAId":"UA-213543146-1","authorFBPixelId":"1857475610982695"});
+});
+window.addEventListener('load', function() {
+  window.dataLayer = window.dataLayer || []; window.dataLayer.push({"event":"detailView","ecommerce":{"detail":{"products":[{"name":"Template Web","id":"51688","price":0,"brand":"Website templates","category":"Design Studio Templates","variant":"free"}]}}});window.dataLayer.push({"event":"detailViewNew","productDetailView":{"name":"Tema HTML5 Gr\u00e1tis - Modelo de Site do Design Studio","id":"51688","price":0,"brand":"Website templates","category":"Design Studio Templates","variant":"free","imageurl":"https:\/\/s.tmimgcdn.com\/scr\/800x500\/51600\/tema-html5-gratis-modelo-de-site-do-design-studio_51688-0-original.jpg","similars":[]}});
+});</script>  
   
-    <main>
-        <h2>Notícias e atualizações</h2>
-        <p>Aqui você encontrará as últimas notícias e atualizações da empresa.</p>
-
-        <section>
-            <h3>Últimas notícias</h3>
-            <ul>
-                <li>
-                    <h4>Título da notícia 1</h4>
-                    <p>Descrição breve da notícia 1.</p>
-                    <p><a href="#">Leia mais</a></p>
-                </li>
-                <li>
-                    <h4>Título da notícia 2</h4>
-                    <p>Descrição breve da notícia 2.</p>
-                    <p><a href="#">Leia mais</a></p>
-                </li>
-                <li>
-                    <h4>Título da notícia 3</h4>
-                    <p>Descrição breve da notícia 3.</p>
-                    <p><a href="#">Leia mais</a></p>
-                </li>
-            </ul>
-        </section>
-
-        <section class="absences">
-            <h2>Informações de ausência</h2>
-            <p>Nenhum colaborador está atualmente ausente.</p>
-        </section>
-
-
-        <form action="#" method="post">
-            <label for="absence-nome">Nome:</label>
-            <input type="text" id="absence-nome" name="absence-nome">
-            <label for="absence-start">Data de início:</label>
-            <input type="date" id="absence-start" name="absence-start">
-            <label for="absence-end">Data de fim:</label>
-            <input type="date" id="absence-end" name="absence-end">
-            <label for="absence-reason">Motivo:</label>
-            <input type="text" id="absence-reason" name="absence-reason">
-            <input type="submit" value="Atualizar">
-        </form>
-
-        <b>
-            <section class="birthdays">
-                <h2>Aniversariantes do mês</h2>
-                <ul>
-                    <li>João Silva - 05/05/1990</li>
-                    <li>Maria Santos - 12/05/1985</li>
-                    <li>Lucas Souza - 23/05/1993</li>
-                </ul>
-            </section>
-
-
-        </b>
-
-
-        <iframe src="https://calendar.google.com/calendar/embed?src=seu-email%40gmail.com&ctz=America%2FSao_Paulo"
-            style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-    </main>
-
-    <b>
-        <form action="#" method="post" enctype="multipart/form-data">
-            <label for="logo-upload">Alterar logo:</label>
-            <input type="file" id="logo-upload" name="logo">
-            <input type="submit" value="Salvar">
-        </form>
 
 
 
-        <script>
-            const logoUpload = document.getElementById('logo-upload');
-            const logoContainer = document.querySelector('.logo-container');
-
-            logoUpload.addEventListener('change', (event) => {
-                const file = event.target.files[0];
-                const reader = new FileReader();
-
-                reader.addEventListener('load', () => {
-                    const logo = document.createElement('img');
-                    logo.src = reader.result;
-                    logo.alt = 'Nova logo da empresa';
-                    logoContainer.innerHTML = '';
-                    logoContainer.appendChild(logo);
-                });
-
-                reader.readAsDataURL(file);
-            });
-
-
-            const absenceForm = document.querySelector('form');
-            const absenceSection = document.querySelector('.absences');
-
-            absenceForm.addEventListener('submit', (event) => {
-                event.preventDefault();
-
-                const startDate = event.target.elements['absence-start'].value;
-                const endDate = event.target.elements['absence-end'].value;
-                const reason = event.target.elements['absence-reason'].value;
-
-                absenceSection.innerHTML = `
-    <h2>Informações de ausência</h2>
-    <p>
-      Colaborador ausente de ${startDate} a ${endDate} por motivo de ${reason}.
-    </p>
-  `;
-
-                event.target.reset();
-            });
 
 
 
-        </script>
-
-        <footer>
-            <p>&copy; 2023 - Projeto desenvolvido para o curso técnico de ADS Puc Minas</p>
-        </footer>
+                            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                                crossorigin="anonymous"></script>
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                                crossorigin="anonymous"></script>
+                            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+                                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                                crossorigin="anonymous"></script>
 </body>
 
 </html>
