@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Intranet Corporativa - Home Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="caminho/para/logo.png" alt="Logo da empresa">
+        </div>
+        <h1>Bem-vindo à Intranet Corporativa</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Recursos Humanos</a></li>
+            <li><a href="#">Financeiro</a></li>
+            <li><a href="#">Marketing</a></li>
+            <li><a href="#">Suporte Técnico</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Notícias e atualizações</h2>
+        <p>Aqui você encontrará as últimas notícias e atualizações da empresa.</p>
+
+        <section>
+            <h3>Últimas notícias</h3>
+            <ul>
+                <li>
+                    <h4>Título da notícia 1</h4>
+                    <p>Descrição breve da notícia 1.</p>
+                    <p><a href="#">Leia mais</a></p>
+                </li>
+                <li>
+                    <h4>Título da notícia 2</h4>
+                    <p>Descrição breve da notícia 2.</p>
+                    <p><a href="#">Leia mais</a></p>
+                </li>
+                <li>
+                    <h4>Título da notícia 3</h4>
+                    <p>Descrição breve da notícia 3.</p>
+                    <p><a href="#">Leia mais</a></p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="absences">
+            <h2>Informações de ausência</h2>
+            <p>Nenhum colaborador está atualmente ausente.</p>
+        </section>
+
+
+        <form action="#" method="post">
+            <label for="absence-nome">Nome:</label>
+            <input type="text" id="absence-nome" name="absence-nome">
+            <label for="absence-start">Data de início:</label>
+            <input type="date" id="absence-start" name="absence-start">
+            <label for="absence-end">Data de fim:</label>
+            <input type="date" id="absence-end" name="absence-end">
+            <label for="absence-reason">Motivo:</label>
+            <input type="text" id="absence-reason" name="absence-reason">
+            <input type="submit" value="Atualizar">
+        </form>
+
+        <b>
+<section class="birthdays">
+  <h2>Aniversariantes do mês</h2>
+  <ul>
+    <li>João Silva - 05/05/1990</li>
+    <li>Maria Santos - 12/05/1985</li>
+    <li>Lucas Souza - 23/05/1993</li>
+  </ul>
+</section>
+
+
+        </b>
+
+
+        <iframe src="https://calendar.google.com/calendar/embed?src=seu-email%40gmail.com&ctz=America%2FSao_Paulo"
+            style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    </main>
+
+    <b>
+        <form action="#" method="post" enctype="multipart/form-data">
+            <label for="logo-upload">Alterar logo:</label>
+            <input type="file" id="logo-upload" name="logo">
+            <input type="submit" value="Salvar">
+        </form>
+
+
+
+        <script>
+            const logoUpload = document.getElementById('logo-upload');
+            const logoContainer = document.querySelector('.logo-container');
+
+            logoUpload.addEventListener('change', (event) => {
+                const file = event.target.files[0];
+                const reader = new FileReader();
+
+                reader.addEventListener('load', () => {
+                    const logo = document.createElement('img');
+                    logo.src = reader.result;
+                    logo.alt = 'Nova logo da empresa';
+                    logoContainer.innerHTML = '';
+                    logoContainer.appendChild(logo);
+                });
+
+                reader.readAsDataURL(file);
+            });
+
+
+            const absenceForm = document.querySelector('form');
+            const absenceSection = document.querySelector('.absences');
+
+            absenceForm.addEventListener('submit', (event) => {
+                event.preventDefault();
+
+                const startDate = event.target.elements['absence-start'].value;
+                const endDate = event.target.elements['absence-end'].value;
+                const reason = event.target.elements['absence-reason'].value;
+
+                absenceSection.innerHTML = `
+    <h2>Informações de ausência</h2>
+    <p>
+      Colaborador ausente de ${startDate} a ${endDate} por motivo de ${reason}.
+    </p>
+  `;
+
+                event.target.reset();
+            });
+
+
+
+        </script>
+
+        <footer>
+            <p>&copy; 2023 - Todos os direitos reservados.</p>
+        </footer>
+</body>
+
+</html>
