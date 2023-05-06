@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Intranet Corporativa</title>
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      
+      input[type="text"],
+      input[type="password"] {
+        margin: 10px 0;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+        width: 300px;
+        max-width: 100%;
+      }
+      
+      button[type="submit"] {
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      
+      button[type="submit"]:hover {
+        background-color: #0062cc;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <h1>Tela de Login</h1>
+      <input type="text" name="username" placeholder="Usuário">
+      <input type="password" name="password" placeholder="Senha">
+      <button type="submit">Entrar</button>
+      <button type="submit">Criar usuário</button>
+      <button type="submit">Esqueci minha senha</button>
+    </form>
+  </body>
+</html>
