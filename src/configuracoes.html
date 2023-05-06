@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Configurações - Intranet Corporativa</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <img src="caminho/para/logo.png" alt="Logo da empresa">
+        </div>
+        <h1>Bem-vindo à Intranet Corporativa</h1>
+  
+        <div class="date">
+            <script>document.write(new Date().toLocaleDateString());</script>
+          </div>
+          
+    </header>
+      
+    <nav>
+      <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="gestao-de-pessoas.html">Gestão de Pessoas</a></li>
+          <li><a href="financeiro.html">Financeiro</a></li>
+          <li><a href="marketing.html">Marketing</a></li>
+          <li><a href="donwload.html">Dowmloads</a></li>
+          <li><a href="contatos.html">Contatos</a></li>
+          <li><a href="configuracoes.html">Configurações</a></li>
+      </ul>
+  </nav>
+
+    <!-- Conteúdo principal -->
+    <main>
+      <h1>Configurações</h1>
+      <p>Personalize as configurações da sua conta e da intranet.</p>
+
+      <div class="account">
+        <h2>Conta</h2>
+        <form>
+          <label for="name">Nome:</label>
+          <input type="text" id="name" name="name" required><br><br>
+
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required><br><br>
+
+          <label for="password">Senha:</label>
+          <input type="password" id="password" name="password" required><br><br>
+
+          <input type="submit" value="Salvar">
+        </form>
+      </div>
+
+      <div class="intranet">
+        <h2>Intranet</h2>
+        <form>
+          <label for="theme">Tema:</label>
+          <select id="theme" name="theme">
+            <option value="light">Claro</option>
+            <option value="dark">Escuro</option>
+          </select><br><br>
+
+          <input type="checkbox" id="notifications" name="notifications">
+          <label for="notifications">Receber notificações</label><br><br>
+
+          <input type="submit" value="Salvar">
+        </form>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2023 - Todos os direitos reservados</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
