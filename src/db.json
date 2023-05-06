@@ -1,0 +1,40 @@
+{
+    "employees": [
+      {
+        "id": 1,
+        "name": "João da Silva",
+        "email": "joao.silva@empresa.com",
+        "department": "vendas",
+        "position": "Vendedor"
+      },
+      {
+        "id": 2,
+        "name": "Maria Souza",
+        "email": "maria.souza@empresa.com",
+        "department": "marketing",
+        "position": "Analista de Marketing"
+      },
+      {
+        "id": 3,
+        "name": "Lucas Santos",
+        "email": "lucas.santos@empresa.com",
+        "department": "suporte",
+        "position": "Técnico de Suporte"
+      },
+      {
+        "id": 4,
+        "name": "Julia Oliveira",
+        "email": "julia.oliveira@empresa.com",
+        "department": "rh",
+        "position": "Gerente de RH"
+      },
+      {
+        "id": 5,
+        "name": "Felipe Garcia",
+        "email": "felipe.garcia@empresa.com",
+        "department": "financeiro",
+        "position": "Analista Financeiro"
+      }
+    ]
+  }
+  
