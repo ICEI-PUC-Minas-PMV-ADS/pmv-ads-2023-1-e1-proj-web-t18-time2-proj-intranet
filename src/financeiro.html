@@ -8,20 +8,29 @@
   <body>
     <!-- Header -->
     <header>
-      <div class="logo">
-        <img src="logo.png" alt="Logo da empresa">
+      <div class="logo-container">
+          <img src="caminho/para/logo.png" alt="Logo da empresa">
       </div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#">Notícias</a></li>
-          <li><a href="#">Ausências</a></li>
-          <li><a href="financeiro.html">Financeiro</a></li>
-          <li><a href="#">Contato</a></li>
-        </ul>
-      </nav>
-    </header>
+      <h1>Bem-vindo à Intranet Corporativa</h1>
+
+      <div class="date">
+          <script>document.write(new Date().toLocaleDateString());</script>
+        </div>
+        
+  </header>
     
+  <nav>
+    <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="#">Gestão de Pessoas</a></li>
+        <li><a href="financeiro.html">Financeiro</a></li>
+        <li><a href="#">Marketing</a></li>
+        <li><a href="#">Dowmloads</a></li>
+        <li><a href="#">Contatos</a></li>
+        <li><a href="#">Configurações</a></li>
+    </ul>
+</nav>
+
     <!-- Conteúdo principal -->
     <main>
       <h1>Financeiro</h1>
@@ -61,7 +70,7 @@
     
     <!-- Footer -->
     <footer>
-      <p>&copy; 2023 - Todos os direitos reservados</p>
+      <p>&copy; 2023 - Projeto desenvolvido para o curso técnico de ADS Puc Minas</p>
     </footer>
   </body>
 </html>
