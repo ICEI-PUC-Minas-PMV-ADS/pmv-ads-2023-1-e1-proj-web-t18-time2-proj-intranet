@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Financeiro - Intranet Corporativa</title>
     <link rel="stylesheet" href="style.css">
+  	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
       $(document).ready(function() {
@@ -27,8 +28,73 @@
             $("#libra").text(result.rates.BRL.toFixed(2));
           }
         });
+  
+        $.ajax({
+          url: "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,litecoin&vs_currencies=brl",
+          success: function(result) {
+            $("#bitcoin").text(result.bitcoin.brl.toFixed(2));
+            $("#ethereum").text(result.ethereum.brl.toFixed(2));
+            $("#litecoin").text(result.litecoin.brl.toFixed(2));
+            $("#cripto").show();
+          }
+        });
       });
+
+/* solicitação de indicadores do Bacen (Luan: nao consegui fazer funcionar):
+
+			$.ajax({
+				url: "https://api.bcb.gov.br/dados/serie/bcdata.sgs.11/dados/ultimos/1?formato=json",
+				headers: {
+					"Authorization": "Basic " + btoa("usuario:senha")
+				},
+				success: function(result) {
+					$("#cdi").text(result[0].valor.toFixed(2).replace(".", ","));
+					$("#taxas").show();
+				}
+			});
+
+			$.ajax({
+				url: "https://api.bcb.gov.br/dados/serie/bcdata.sgs.4390/dados/ultimos/1?formato=json",
+				headers: {
+					"Authorization": "Basic " + btoa("usuario:senha")
+				},
+				success: function(result) {
+					$("#selic").text(result[0].valor.toFixed(2).replace(".", ","));
+					$("#taxas").show();
+				}
+			});
+
+			$.ajax({
+				url: "https://api.bcb.gov.br/dados/serie/bcdata.sgs.13522/dados/ultimos/1?formato=json",
+				headers: {
+					"Authorization": "Basic " + btoa("usuario:senha")
+				},
+				success: function(result) {
+					$("#ipca").text(result[0].valor.toFixed(2).replace(".", ","));
+					$("#inpc").text("N/A");
+					$("#indices").show();
+				}
+			});
+
+			$.ajax({
+				url: "https://api.bcb.gov.br/dados/serie/bcdata.sgs.189/dados/ultimos/1?formato=json",
+				headers: {
+					"Authorization": "Basic " + btoa("usuario:senha")
+				},
+				success: function(result) {
+					$("#igpm").text(result[0].valor.toFixed(2).replace(".", ","));
+					$("#indices").show();
+				}
+			});
+
+*/
+
     </script>
+    <style>
+      #cripto {
+        display: none;
+      }
+    </style>
   </head>
   <body>
     <!-- Header -->
@@ -59,15 +125,7 @@
     <!-- Conteúdo principal -->
     <main>
       <h1>Financeiro</h1>
-      <section class="financeiro">
-        <h2>Balanço financeiro</h2>
-        <p>Veja aqui o balanço financeiro da empresa:</p>
-        <ul>
-          <li>Receita total: R$ 10.000.000,00</li>
-          <li>Custos totais: R$ 7.000.000,00</li>
-          <li>Lucro líquido: R$ 3.000.000,00</li>
-        </ul>
-      </section>
+
       
       <section class="despesas">
         <h2>Despesas</h2>
@@ -92,25 +150,144 @@
         </table>
       </section>
 
+      <section class="despesas">
+        <h2>Receitas</h2>
+        <p>Veja aqui as despesas da empresa por categoria:</p>
+        <table>
+          <tr>
+            <th>Categoria</th>
+            <th>Valor (R$)</th>
+          </tr>
+          <tr>
+            <td>Salários</td>
+            <td>4.000.000,00</td>
+          </tr>
+          <tr>
+            <td>Aluguel</td>
+            <td>1.000.000,00</td>
+          </tr>
+          <tr>
+            <td>Suprimentos</td>
+            <td>500.000,00</td>
+          </tr>
+        </table>
+      </section>
+
+
+      <section class="despesas">
+        <h2>Vendas</h2>
+        <p>Veja aqui as despesas da empresa por categoria:</p>
+        <table>
+          <tr>
+            <th>Categoria</th>
+            <th>Valor (R$)</th>
+          </tr>
+          <tr>
+            <td>Salários</td>
+            <td>4.000.000,00</td>
+          </tr>
+          <tr>
+            <td>Aluguel</td>
+            <td>1.000.000,00</td>
+          </tr>
+          <tr>
+            <td>Suprimentos</td>
+            <td>500.000,00</td>
+          </tr>
+        </table>
+      </section>
+
+      <section class="despesas">
+        <h2>Estoque</h2>
+        <p>Veja aqui as despesas da empresa por categoria:</p>
+        <table>
+          <tr>
+            <th>Categoria</th>
+            <th>Valor (R$)</th>
+          </tr>
+          <tr>
+            <td>Salários</td>
+            <td>4.000.000,00</td>
+          </tr>
+          <tr>
+            <td>Aluguel</td>
+            <td>1.000.000,00</td>
+          </tr>
+          <tr>
+            <td>Suprimentos</td>
+            <td>500.000,00</td>
+          </tr>
+        </table>
+      </section>
+      <section class="financeiro">
+        <h2>Balanço financeiro</h2>
+        <p>Veja aqui o balanço financeiro da empresa:</p>
+        <ul>
+          <li>Receita total: R$ 10.000.000,00</li>
+          <li>Custos totais: R$ 7.000.000,00</li>
+          <li>Lucro líquido: R$ 3.000.000,00</li>
+        </ul>
+      </section>
+
       <section>
         <h2>Mercado</h2>
         <table>
-          <tr>
-            <th>Moeda</th>
-            <th>Cotação (R$)</th>
-          </tr>
-          <tr>
-            <td>Dólar</td>
-            <td id="dolar">Carregando...</td>
-          </tr>
-          <tr>
-            <td>Euro</td>
-            <td id="euro">Carregando...</td>
-          </tr>
-          <tr>
-            <td>Libra</td>
-            <td id="libra">Carregando...</td>
-          </tr>
+          <table>
+            <tr>
+              <th>Moeda</th>
+              <th>Cotação</th>
+            </tr>
+            <tr>
+              <td>Dólar (USD)</td>
+              <td id="dolar">Carregando...</td>
+            </tr>
+            <tr>
+              <td>Euro (EUR)</td>
+              <td id="euro">Carregando...</td>
+            </tr>
+            <tr>
+              <td>Libra (GBP)</td>
+              <td id="libra">Carregando...</td>
+            </tr>
+          </table>
+          
+
+          <table id="taxas">
+            <tr>
+              <th>Taxa</th>
+              <th>Valor</th>
+            </tr>
+            <tr>
+              <td>CDI</td>
+              <td id="cdi">Carregando...</td>
+            </tr>
+            <tr>
+              <td>Selic</td>
+              <td id="selic">Carregando...</td>
+            </tr>
+          </table>
+          
+
+          <table id="indices">
+            <tr>
+              <th>Índice</th>
+              <th>Valor</th>
+            </tr>
+            <tr>
+              <td>IPCA</td>
+              <td id="ipca">Carregando...</td>
+            </tr>
+            <tr>
+              <td>IGPM</td>
+              <td id="igpm">Carregando...</td>
+            </tr>
+            <tr>
+              <td>INPC</td>
+              <td id="inpc">Carregando...</td>
+            </tr>
+          </table>
+          </div>
+
         </table>
       </section> 
 
