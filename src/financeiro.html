@@ -4,6 +4,31 @@
     <meta charset="UTF-8">
     <title>Financeiro - Intranet Corporativa</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $.ajax({
+          url: "https://api.exchangerate-api.com/v4/latest/USD",
+          success: function(result) {
+            $("#dolar").text(result.rates.BRL.toFixed(2));
+          }
+        });
+  
+        $.ajax({
+          url: "https://api.exchangerate-api.com/v4/latest/EUR",
+          success: function(result) {
+            $("#euro").text(result.rates.BRL.toFixed(2));
+          }
+        });
+  
+        $.ajax({
+          url: "https://api.exchangerate-api.com/v4/latest/GBP",
+          success: function(result) {
+            $("#libra").text(result.rates.BRL.toFixed(2));
+          }
+        });
+      });
+    </script>
   </head>
   <body>
     <!-- Header -->
@@ -66,7 +91,33 @@
           </tr>
         </table>
       </section>
+
+      <section>
+        <h2>Mercado</h2>
+        <table>
+          <tr>
+            <th>Moeda</th>
+            <th>Cotação (R$)</th>
+          </tr>
+          <tr>
+            <td>Dólar</td>
+            <td id="dolar">Carregando...</td>
+          </tr>
+          <tr>
+            <td>Euro</td>
+            <td id="euro">Carregando...</td>
+          </tr>
+          <tr>
+            <td>Libra</td>
+            <td id="libra">Carregando...</td>
+          </tr>
+        </table>
+      </section> 
+
     </main>
+    
+
+
     
     <!-- Footer -->
     <footer>
