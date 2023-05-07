@@ -115,7 +115,7 @@ body {
   }
   
 
-
+/*  Tela de login  */
 
 .login-box{
         width: 850px;
@@ -148,3 +148,18 @@ body {
     color: white;
 }
 
+
+/*  Financeiro  */
+
+.conteiner{
+  margin: 200px;
+  height: 200px;
+  width: 800px;
+
+}
+
+.canvas {
+  border: 1px solid gainsboro;
+  background: white;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+}
