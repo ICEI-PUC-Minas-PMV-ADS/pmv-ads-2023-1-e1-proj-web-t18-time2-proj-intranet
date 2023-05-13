@@ -18,3 +18,14 @@ Conforme fluxo de telas do projeto, apresentado no item anterior, as telas do si
 
 
 
+Tela - Home-Page
+A tela de home-page mostra o calendário corporativo, slides com informações importantes, notícias, lembretes editáveis para cada usuário e botões de direcionamento para as funções (Finanças, Marketing, Gestão de Pessoas e Produção).
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t18-time2-proj-intranet/assets/128554958/aac4c142-0854-4115-b0df-d6f7b01fd63d)
+
+
+Tela - Finanças
+A tela da função Finanças terá a opções de registro simplificado de caixa, somatório com o fechamento de caixa do dia, dados do report mensal alimentado periodicamente e espaço para anexar arquivos. 
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t18-time2-proj-intranet/assets/128554958/f052534f-f847-4e81-b729-76a650f9347f)
+
