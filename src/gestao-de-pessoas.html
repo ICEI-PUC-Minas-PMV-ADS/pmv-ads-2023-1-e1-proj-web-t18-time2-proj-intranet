@@ -103,7 +103,7 @@
                       <input type="button" class="btn btn-warning" id="btnUpdate" value="Alterar">
 
                       <input type="button" class="btn btn-secondary" id="btnClear" value="Limpar Form">
-                      <a href="lista_contatos.html"><input type="button" class="btn btn-link" id="btnClear" value="Pesquisar Contatos"></a>
+                      <a href="lista_contatos.html"><input type="button" class="btn btn-link" id="btnClear" value="Pesquisar Colaboradores"></a>
                   </div>
               </div>
           </form>
@@ -196,7 +196,7 @@
                   // Obtem os valores dos campos do formulário
                   let campoId = $("#inputId").val();
                   if (campoId == "") {
-                      displayMessage("Selecione um contato para ser alterado.");
+                      displayMessage("Selecione um colaborador para ser alterado.");
                       return;
                   }
                   let campoNome = $("#inputNome").val();
@@ -225,7 +225,7 @@
               $("#btnDelete").click(function () {
                   let campoId = $("#inputId").val();
                   if (campoId == "") {
-                      displayMessage("Selecione um contato a ser excluído.");
+                      displayMessage("Selecione um colaborador a ser excluído.");
                       return;
                   }
                   deleteContato(parseInt(campoId));

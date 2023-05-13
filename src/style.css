@@ -124,13 +124,12 @@ body {
 }
 
 .título{
-    color: rgb(51, 8, 71);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-style: italic;
+    color: #003366;
+    font-style:normal;
 }
 
 .login{
-    color: rgba(135, 105, 180, 0.5);
+    color: #003366;
 }
 
 .Usuario-Senha{

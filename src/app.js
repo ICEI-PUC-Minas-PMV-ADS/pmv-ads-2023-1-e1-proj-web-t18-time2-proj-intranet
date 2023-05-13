@@ -122,7 +122,7 @@ function insertContato(contato) {
 
     // Insere o novo objeto no array
     db.data.push(novoContato);
-    displayMessage("Contato inserido com sucesso");
+    displayMessage("Colaborador inserido com sucesso");
 
     // Atualiza os dados no Local Storage
     localStorage.setItem('db_contato', JSON.stringify(db));
@@ -140,7 +140,7 @@ function updateContato(id, contato) {
     db.data[index].categoria = contato.categoria,
     db.data[index].website = contato.website
 
-    displayMessage("Contato alterado com sucesso");
+    displayMessage("Colaborador alterado com sucesso");
 
     // Atualiza os dados no Local Storage
     localStorage.setItem('db_contato', JSON.stringify(db));
@@ -150,7 +150,7 @@ function deleteContato(id) {
     // Filtra o array removendo o elemento com o id passado
     db.data = db.data.filter(function (element) { return element.id != id });
 
-    displayMessage("Contato removido com sucesso");
+    displayMessage("Colaborador removido com sucesso");
 
     // Atualiza os dados no Local Storage
     localStorage.setItem('db_contato', JSON.stringify(db));
