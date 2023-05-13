@@ -4,14 +4,15 @@
 A metodologia contempla as definições de ferramental utilizado pela equipe tanto para a manutenção dos códigos e demais artefatos quanto para a organização do time na execução das tarefas do projeto.
 
 Relação de Ambientes de Trabalho
+
 Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue. 
 
 Ambiente	Plataforma	Link de Acesso
 Repositório de código fonte	GitHub	[https://classroom.github.com/a/eb2MHlqE](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t18-time2-proj-intranet.git)
 
-Documentos do projeto	Grupo OneDrive	https://sgapucminasbr-my.sharepoint.com/:f:/g/personal/1147310_sga_pucminas_br/ElppCBQE_hpFqAQO2CR1VF4BvPV0SLlMqRZNGvQ8MSdrrg?e=MyaWyo
-Projeto de Interface e  Wireframes	MarvelApp	https://marvelapp.com/prototype/199cad34  
-Gerenciamento do Projeto	Trello	https://trello.com/invite/b/kBLaftCj/ATTI5c3c662dab882629acac8e345554aba612749BA8/projeto-intranet
+Documentos do projeto	Grupo OneDrive:	https://sgapucminasbr-my.sharepoint.com/:f:/g/personal/1147310_sga_pucminas_br/ElppCBQE_hpFqAQO2CR1VF4BvPV0SLlMqRZNGvQ8MSdrrg?e=MyaWyo
+Projeto de Interface e  Wireframes	MarvelApp:	https://marvelapp.com/prototype/199cad34  
+Gerenciamento do Projeto	Trello:	https://trello.com/invite/b/kBLaftCj/ATTI5c3c662dab882629acac8e345554aba612749BA8/projeto-intranet
 
 
 ## Gerenciamento de Projeto
