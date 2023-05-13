@@ -10,8 +10,23 @@
     <link rel="stylesheet" href="style.css">    
 </head>
 
+
+     <!-- Header -->
+     <header>
+        <div class="logo-container">
+          <img src="logo.png" alt="Logo da empresa" height="100" >
+        </div>
+        <h1>Bem-vindo à Intranet Corporativa</h1>
+  
+        <div class="date">
+            <script>document.write(new Date().toLocaleDateString());</script>
+          </div>
+          
+    </header>
+
 <body onload="ListaContatos()">
-    <h1>Listagem de Contatos</h1>
+    <br>
+    <h1>Pesquisa - Listagem de colaboradores</h1>
 
     <div class="container">
         <div class="row">
@@ -22,7 +37,7 @@
 
         <div class="row">
             <div id="msg" class="col-sm-2 offset-sm-10 ">
-                <a href="index.html"><input type="button" class="btn btn-warning" id="btnClear" value="Cadastro"></a>
+                <a href="gestao-de-pessoas.html"><input type="button" class="btn btn-info" id="btnClear" value="Voltar a Gestão de pessoas"></a>
             </div>
         </div>        
         
@@ -40,10 +55,10 @@
                 </div>
                 <div class="col-sm-8">
                     <select name="filtro_categoria" id="filtro_categoria" onchange="ListaContatos()"  class="form-control">
-                        <option value="">Selecione a Categoria</option>
-                        <option value="amigos">Amigos</option>
-                        <option value="familia">Familia</option>
-                        <option value="trabalho">Trabalho</option>
+                        <option value="">Selecione o setor</option>
+                        <option value="amigos">Administrativo</option>
+                        <option value="familia">Comercial</option>
+                        <option value="trabalho">Operações</option>
                     </select>
                 </div>
             </div>
@@ -60,8 +75,8 @@
                             <th scope="col">Telefone</th>
                             <th scope="col">E-mail</th>
                             <th scope="col">Cidade</th>
-                            <th scope="col">Categoria</th>
-                            <th scope="col">Site</th>
+                            <th scope="col">Setor</th>
+                            <th scope="col">Login</th>
                         </tr>
                     </thead>
                     <tbody id="table-contatos">
