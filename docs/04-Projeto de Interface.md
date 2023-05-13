@@ -7,7 +7,7 @@ Dentre as preocupações para a montagem da interface do sistema, estamos estabe
 
 O diagrama apresentado na Figura 1 mostra o fluxo de interação pelas telas do sistema. Cada uma das telas deste fluxo é detalhada na seção de Wireframes que se segue. 
 
-(img/wireframe-interface.png)
+<img/modelo.png>
 Para visualizar o wireframe interativo, acesse o link https://marvelapp.com/prototype/199cad34.
 
 
