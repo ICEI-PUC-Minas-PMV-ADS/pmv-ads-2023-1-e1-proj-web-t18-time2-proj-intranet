@@ -7,7 +7,9 @@ Dentre as preocupações para a montagem da interface do sistema, estamos estabe
 
 O diagrama apresentado na Figura 1 mostra o fluxo de interação pelas telas do sistema. Cada uma das telas deste fluxo é detalhada na seção de Wireframes que se segue. 
 
- <img src="/doc/img/modelo.png">
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t18-time2-proj-intranet/assets/128554958/8e64e66e-2070-4323-82c5-6f1ed1d66240)
+
+
 Para visualizar o wireframe interativo, acesse o link https://marvelapp.com/prototype/199cad34.
 
 
@@ -28,4 +30,21 @@ Tela - Finanças
 A tela da função Finanças terá a opções de registro simplificado de caixa, somatório com o fechamento de caixa do dia, dados do report mensal alimentado periodicamente e espaço para anexar arquivos. 
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t18-time2-proj-intranet/assets/128554958/f052534f-f847-4e81-b729-76a650f9347f)
+
+
+Tela - Produção
+A tela da função Produção terá espaço para um vídeo informativo, normativos com os modus operandi dos processos, dados do report mensal alimentado periodicamente e espaço para anexar arquivos.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t18-time2-proj-intranet/assets/128554958/d1ad71c9-5bd3-4e64-8474-52788c130753)
+
+Tela – Gestão de Pessoas
+A tela da Função Gestão de Pessoas terá uma lista de normativos de procedimentos corporativos, treinamentos e espaço para anexar arquivos.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t18-time2-proj-intranet/assets/128554958/ab88e413-ef9d-4573-8c0a-597ceeb5c855)
+
+
+Tela - Marketing
+A tela da função Produção terá espaço para um vídeo informativo, dados do report mensal alimentado periodicamente e espaço para anexar arquivos.
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t18-time2-proj-intranet/assets/128554958/b43cc180-70c8-415c-bb9e-3b84e089b391)
+
 
