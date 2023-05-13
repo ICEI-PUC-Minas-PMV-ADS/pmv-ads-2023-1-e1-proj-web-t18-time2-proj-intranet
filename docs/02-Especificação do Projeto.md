@@ -1,91 +1,100 @@
 # Especificações do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
-
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
+A definição exata do problema e os pontos mais relevantes a serem tratados neste projeto foi consolidada com a participação dos usuários em um trabalho de imersão feita pelos membros da equipe a partir da observação dos usuários em seu local natural e por meio de entrevistas. Os detalhes levantados nesse processo foram consolidados na forma de personas e histórias de usuários.
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+Personas
+As personas levantadas durante o processo de entendimento do problema são apresentadas na Figuras que se seguem.
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+ Pedro Fidelis, Idade: 32. Ocupação: Tecnólogo, é sócio de uma pequena micro empresa que atua no ramo de informática promovendo aos seus clientes informações integradas e tecnologia de ponta.	
+Aplicativos:
+•	Instagram
+•	Linkedin 
+•	Twitter 
+Motivações
+•	Reconhecimento no ramo 
+•	Aprendizado 
+•	Melhora da Criatividade 
+Frustrações
+•	Falta de Reconhecimento 
+•	Falta de Demanda 
+•	Recursos Básicos 
+•	Falhas Inesperadas 	Hobbies, História
+•	Assistir Videos
+•	Organizar 
 
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+
+ Júlia Soares, Idade: 23. Ocupação: Programadora, funcionária de uma empresa no setor administrativo e empreendedora. 	
+Aplicativos:
+•	Twitter 
+•	Linkedin
+•	Instagram 
+Motivações
+•	Futuro aprazível 
+•	Empresa Própria 
+•	Alto Rendimento 
+	Frustrações
+•	Problemas de infraestrutura 
+•	Financiamento 
+•	Oportunidades 
+•	Acesso / Compatibilidade 	
+Hobbies, História
+•	Passear ao ar livre 
+•	Ler Livros
+
 
 ## Histórias de Usuários
 
-Com base na análise das personas forma identificadas as seguintes histórias de usuários:
+Histórias de usuários
+De acordo com as informações apresentada foram identificadas situações de necessidades de utilização do sistema a fim de obtermos as seguintes histórias de usuários:
 
-|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
-|--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+Eu como …  [PERSONA] 	… quero/desejo …  O que	… para .... Por que?
+Pedro	Visualizar mensagens e informações gerais da empresa	Ter ciência de avisos importantes da empresa
+Pedro	Customizar a página principal da intranet	Tonar um ambiente mais introspectivo da empresa e deixa com um aspecto mais personalizado
+Pedro	Manter um registro de evento que ocorrerá na empresa	Deixar visível a outros usuários da empresa para que todos tenham ciencia
+Júlia	Criar um diretório para donwload de documetos importantes e rotineiros da empresa	Manter um local único para facilitar o acesso dos usuários a documentações importantes
+Júlia	Compartilhar lembretes de ações específicas de atuação no dia	Compartilhar com toda a empresa de uma única vez um lembrete importante de uma atividade específica
+Júlia	Poder realizar uma pesquisa em um local dos dados de contato de cada colaborador	Facilitar a consulta de ramais, e-mails, telefones de todos os colaboradores da empresa
+Júlia	Poder criar conteúdos específicos de cada setor	Setorizar a informação torna o ambiente mais organizado e de facil acesso
 
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
 
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
 
 ## Requisitos
-
-As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto.
+Podemos conceituar Requisitos funcionais como as interações realizadas pelos usuários de um sistema de informação. Por outro lado, os requisitos não funcionais dizem respeito aos aspectos e características que o sistema deve possuir em um contexto amplo. Serão demonstrados a seguir:
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade em que os mesmos devem ser entregues.
+
+ID 	Descrição 	Prioridade 
+RF-01 	O site deve apresentar na página principal no formato de "feed" com as notícias postadas	Alta
+RF-02 	O site deve permitir a personalização de cores e logo	Baixa
+RF-03 	O site precisará ter um calendário para gestão de eventos da empresa	Alta
+RF-04 	O site deve oferecer um local para depositório de arquivos importantes	Média
+RF-05 	O site deve permitir a criação de um lembrete do dia que aparecerá na tela do usuário	Baixa
+RF-06 	O site deverá ter um local para acesso e pesquisa de colaboradores no modelo de uma agenda eletronica 	Baixa
+RF-07 	O site deve permitir a setorização de informações	Média
+RF-08 	O site precisará ter um local para que possam ser inclusos informações de ausencia na empresa	Alta
 
 
 ### Requisitos não Funcionais
 
-|ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+A tabela a seguir apresenta os requisitos não funcionais que o projeto deverá atender.
 
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
+ID	Descrição	Prioridade
+RNF-01	O site deve ser publicado em um ambiente acessível publicamente na Internet (Repl.it, GitHub Pages, Heroku); 	Alta
+RNF-02	O site deverá ser responsivo permitindo a visualização em um celular de forma adequada	Alta
+RNF-03	O site deve ter bom nível de contraste entre os elementos da tela em conformidade 	Média
+RNF-04	O site deve ser compatível com os principais navegadores do mercado (Google Chrome, Firefox, Microsoft Edge)	Alta
 
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
 
 ## Restrições
 
-O projeto está restrito pelos itens apresentados na tabela a seguir.
+As questões que limitam a execução desse projeto e que se configuram como obrigações claras para o desenvolvimento do projeto em questão são apresentadas na tabela a seguir.
 
-|ID| Restrição                                             |
-|--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
+ID	Descrição
+RE-01	O projeto deverá ser entregue no final do semestre letivo, não podendo extrapolar a data de 31/06/2023.
+RE-02	O aplicativo deve se restringir às tecnologias básicas da Web no Frontend
+RE-03	A equipe não pode subcontratar o desenvolvimento do trabalho.
 
-
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
