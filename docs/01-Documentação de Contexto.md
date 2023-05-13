@@ -1,46 +1,35 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+O grande avanço da agilidade oriunda dos meios digitais faz com que todos os empresários tenham uma gestão em tempo real do seu negócio. O fato de não conseguir realizar uma comunicação interna em uma empresa pode fazer com que uma empresa perca oportunidades e gere prejuízo. Diante disto são as micro e pequenas empresas e os microempreendedores que mais carecem de uma ferramenta para auxiliar na adminsitração do seu negócio.
+
+Segundo o Sebrae, 24,4% das micro e pequenas empresas foram fechadas em menos de dois anos. O percentual aumenta, quando se muda o prazo para quatro anos: 50% delas fecham as portas. O Serasa Experian aponta em estudo que um dos motivos está associado a necessidade de investimento em Inovação, sendo este um requisito crucial para sobrevivência. É inegável que a tecnologia propicia a redução de custos e é fundamental para resolução de problemas de forma mais eficiente e sustentável.
+
+Entretanto, além da dificuldade para romper com as práticas atuais e aderir ao novo, a falta de tempo e recursos financeiros tornam-se limitadores poderosos. O empreendedor acaba por ser exigido de ter conhecimento, e muitas vezes executar, tarefas de diferentes áreas: ele é o Marketing, o Financeiro, a Gestão de Pessoas e também a Produção. Nesse sentido, é necessário que as soluções existentes para sistematizar as informações sejam simplificadas e acessíveis para que auxilie o empreendedor a otimizar suas atividades e, sobretudo, para que torne factível a perpetuação dessas otimizações. 
+
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
-
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
-
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+Diante do exposto, o problema que se busca resolver com este projeto é a dificuldade de gestão das diferentes funções, e a comunicação dentro de uma microempresa em razão das limitações do empreendedor relacionadas a tempo, conhecimento e recursos tecnológicos.
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+O objetivo geral deste trabalho é a criação de um modelo de intranet simplificado e facilmente customizável que possibilite que o empreendedor consiga centralizar e gerir, de forma sistematizada, grande parte das funções e tarefas da empresa.
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Como objetivos específicos, podemos ressaltar:
+
+- Criar um espaço com possibilidade de customização da logo e cores da empresa e que edição possa ser realizada de forma simplificada.
+- Desenvolver uma página inicial para informações importantes, lembretes, calendário e notícias;
+- Criar um ambiente para gestão das informações de cada uma das principais funções: Financeiro, Produção, Marketing e Gestão de Pessoas;
+- Criar perfis de usuários para gestão de acesso.
+
 
 ## Justificativa
+As micro e pequenas foram as grandes geradoras de emprego com 1,661 milhão (71,6%) novas contratações. A participação das médias e grandes na geração de empregos é de 22% com 513 mil contratações. “O comparativo de 2021 com 2022 mostram cenários praticamente idênticos.  (SEBRAE, 2022)
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+No total, em 2022, foram 3,6 milhões de novos empreendimentos abertos no Brasil, sendo a maioria concentrada na categoria do microempreendedor individual (MEI) , porém segundo dados do Ministério da Economia 1,6 milhões fecharam as portas.
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
+Dada a sua importância na economia de um país, as microempresas precisam de serem gerenciadas da melhor forma possível para evitar o encerramento de suas atividades. Durante o passar do tempo, elas têm se desenvolvido e se firmando no mercado o que pode ser potencializado com a utilização de ferramentas aplicadas adequadamente dentro da gestão dos seus negócios. Dessa forma poderão desenvolver suas atividades dinamicamente e fazer vez frente a um cenário acirrado ampliando sua participação de mercado (SGANZERLA, 2020).
 
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
-
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
-
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+O público-alvo desta solução são pequenos negócios, em especial microempresas e microempreendedores com até 10 funcionários.

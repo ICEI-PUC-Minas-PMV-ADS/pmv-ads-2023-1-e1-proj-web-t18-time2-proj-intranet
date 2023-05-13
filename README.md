@@ -25,7 +25,7 @@ O objetivo geral deste trabalho é a criação de um modelo de intranet simplifi
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+Deverá ser iniciado o arquivo no caminho: src/loginn.html
 
 # Documentação
 
@@ -45,7 +45,7 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 
 # Hospedagem
 
-* Insira o endereço eletrônico público de acesso ao conteúdo publicado. 
+[* Insira o endereço eletrônico público de acesso ao conteúdo publicado. ](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t18-time2-proj-intranet.git)
 
 # Armazenamento do Código-Fonte
 
