@@ -41,6 +41,10 @@ Para organização e distribuição das tarefas do projeto, a equipe está utili
 ●	Review: Após conclusão da tarefa, ela será movida para esta etapa para avaliação dos demais membros da equipe.
 ●	Done: Nesta lista são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontos para ser entregues ao usuário.
 
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t18-time2-proj-intranet/assets/128554958/432fe1e7-7677-4d7d-8a20-9aa42498e2ab)
+
+
 O quadro kanban do grupo a ser utilizado no desenvolvimento do projeto está disponível através no seguinte link: ttps://trello.com/invite/b/kBLaftCj/ATTI5c3c662dab882629acac8e345554aba612749BA8/projeto-intranet.
 
 ### Ferramentas
