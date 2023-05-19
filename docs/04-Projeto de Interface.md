@@ -7,6 +7,7 @@ Dentre as preocupações para a montagem da interface do sistema, estamos estabe
 
 O diagrama apresentado na Figura 1 mostra o fluxo de interação pelas telas do sistema. Cada uma das telas deste fluxo é detalhada na seção de Wireframes que se segue. 
 
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t18-time2-proj-intranet/assets/128554958/8e64e66e-2070-4323-82c5-6f1ed1d66240)
 
 
 Para visualizar o wireframe interativo, acesse o link https://marvelapp.com/prototype/199cad34.
