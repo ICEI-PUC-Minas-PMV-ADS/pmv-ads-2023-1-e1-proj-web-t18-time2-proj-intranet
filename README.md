@@ -44,6 +44,7 @@ Deverá ser iniciado o arquivo no caminho: src/loginn.html
 </ol>
 
 # Hospedagem
+<a href="https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2023-1-e1-proj-web-t18-time2-proj-intranet/"> Acesse aqui </a>
 
 [* Insira o endereço eletrônico público de acesso ao conteúdo publicado. ](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t18-time2-proj-intranet.git)
 
