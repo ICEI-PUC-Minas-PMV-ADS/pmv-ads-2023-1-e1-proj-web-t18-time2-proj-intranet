@@ -57,30 +57,31 @@
         </ul>
     </nav>
     <main>
-        <h2>Notícias e atualizações</h2>
+        <h1>Notícias e atualizações</h1>
         <p>Aqui você encontrará as últimas notícias e atualizações da empresa.</p>
 
 
         <section>
 
             <ul>
-                <h3>Últimas notícias</h3>
+                <h1>Últimas notícias</h1>
 
                 <div id="dados-container"></div>
 
-                <button id="botao-adicionar">Adicionar nova informação</button>
-            
+                <button id="botao-adicionar">Adicionar nova notícia</button>
+
                 <div id="modal-form" class="modal">
                     <div class="modal-content">
                         <span class="close">&times;</span>
-                        <h2 id="modal-title">Novo Registro</h2>
+                        <h2 id="modal-title">Nova notícia</h2>
                         <form id="formulario">
-                            <label for="titulo">Título:</label>
+                            <label for="titulo">Título:</label> <br>
                             <input type="text" id="titulo" required>
-            
-                            <label for="descricao">Descrição:</label>
+                            <BR></BR>
+                            <label for="descricao">Descrição:</label> <br>
                             <textarea id="descricao" required></textarea>
-            
+                            <br>
+                            <br>
                             <button type="submit">Salvar</button>
                         </form>
                     </div>
@@ -89,6 +90,10 @@
             </ul>
 
             <ul>
+                <li>
+                    <h4>Acesso rápido</h4>
+                </li>
+
                 <li>
                     <h4>Como utilizar a intranet?</h4>
                     <p>Confirta todas as funcionalidades</p>
@@ -107,41 +112,15 @@
             </ul>
         </section>
 
-        <section class="absences">
-            <h2>Informações de ausência</h2>
-            <p>Nenhum colaborador está atualmente ausente.</p>
-        </section>
+<section>
 
 
-        <form action="#" method="post">
-            <label for="absence-nome">Nome:</label>
-            <input type="text" id="absence-nome" name="absence-nome">
-            <label for="absence-start">Data de início:</label>
-            <input type="date" id="absence-start" name="absence-start">
-            <label for="absence-end">Data de fim:</label>
-            <input type="date" id="absence-end" name="absence-end">
-            <label for="absence-reason">Motivo:</label>
-            <input type="text" id="absence-reason" name="absence-reason">
-            <input type="submit" value="Atualizar">
-        </form>
-
-        <b>
-            <section class="birthdays">
-                <h2>Aniversariantes do mês</h2>
-                <ul>
-                    <li>João Silva - 05/05/1990</li>
-                    <li>Maria Santos - 12/05/1985</li>
-                    <li>Lucas Souza - 23/05/1993</li>
-                </ul>
-            </section>
-
-
-        </b>
-
-
+        <h1>Calendário</h1>
         <iframe src="https://calendar.google.com/calendar/embed?src=seu-email%40gmail.com&ctz=America%2FSao_Paulo"
             style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-    </main>
+   
+        </section>
+        </main>
 
 
 
@@ -192,116 +171,116 @@
     </script>
 
 
-<script src="base.js"></script>
-<script>
-    var botaoAdicionar = document.getElementById("botao-adicionar");
-    var modalForm = document.getElementById("modal-form");
-    var closeModal = document.getElementsByClassName("close")[0];
-    var formulario = document.getElementById("formulario");
-    var modalTitle = document.getElementById("modal-title");
+    <script src="base.js"></script>
+    <script>
+        var botaoAdicionar = document.getElementById("botao-adicionar");
+        var modalForm = document.getElementById("modal-form");
+        var closeModal = document.getElementsByClassName("close")[0];
+        var formulario = document.getElementById("formulario");
+        var modalTitle = document.getElementById("modal-title");
 
-    var editarIndex = null; // Índice da informação a ser editada
+        var editarIndex = null; // Índice da informação a ser editada
 
-    botaoAdicionar.addEventListener("click", function() {
-        modalTitle.textContent = "Novo Registro";
-        modalForm.style.display = "block";
-        editarIndex = null;
-        formulario.reset();
-    });
+        botaoAdicionar.addEventListener("click", function () {
+            modalTitle.textContent = "Nova Notícia";
+            modalForm.style.display = "block";
+            editarIndex = null;
+            formulario.reset();
+        });
 
-    closeModal.addEventListener("click", function() {
-        modalForm.style.display = "none";
-        formulario.reset();
-    });
-
-    window.addEventListener("click", function(event) {
-        if (event.target == modalForm) {
+        closeModal.addEventListener("click", function () {
             modalForm.style.display = "none";
             formulario.reset();
+        });
+
+        window.addEventListener("click", function (event) {
+            if (event.target == modalForm) {
+                modalForm.style.display = "none";
+                formulario.reset();
+            }
+        });
+
+        formulario.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            var titulo = document.getElementById("titulo").value;
+            var descricao = document.getElementById("descricao").value;
+
+            if (editarIndex !== null) {
+                // Editar informação existente
+                db.dados[editarIndex].titulo = titulo;
+                db.dados[editarIndex].descricao = descricao;
+            } else {
+                // Adicionar nova informação
+                var novaInformacao = {
+                    titulo: titulo,
+                    descricao: descricao
+                };
+
+                db.dados.push(novaInformacao);
+            }
+
+            exibirDados();
+
+            modalForm.style.display = "none";
+            formulario.reset();
+            editarIndex = null;
+        });
+
+        function exibirDados() {
+            var dadosContainer = document.getElementById("dados-container");
+            dadosContainer.innerHTML = "";
+
+            for (var i = 0; i < db.dados.length; i++) {
+                var titulo = db.dados[i].titulo;
+                var descricao = db.dados[i].descricao;
+
+                var elementoTitulo = document.createElement("h2");
+                elementoTitulo.textContent = titulo;
+
+                var elementoDescricao = document.createElement("p");
+                elementoDescricao.textContent = descricao;
+
+                var btnExcluir = document.createElement("button");
+                btnExcluir.textContent = "Excluir";
+                btnExcluir.dataset.index = i;
+                btnExcluir.addEventListener("click", excluirInformacao);
+
+                var btnEditar = document.createElement("button");
+                btnEditar.textContent = "Editar";
+                btnEditar.dataset.index = i;
+                btnEditar.addEventListener("click", editarInformacao);
+
+                var hr = document.createElement("hr");
+
+                dadosContainer.appendChild(elementoTitulo);
+                dadosContainer.appendChild(elementoDescricao);
+                dadosContainer.appendChild(btnExcluir);
+                dadosContainer.appendChild(btnEditar);
+                dadosContainer.appendChild(hr);
+            }
         }
-    });
 
-    formulario.addEventListener("submit", function(event) {
-        event.preventDefault();
+        function excluirInformacao(event) {
+            var index = event.target.dataset.index;
+            db.dados.splice(index, 1);
+            exibirDados();
+        }
 
-        var titulo = document.getElementById("titulo").value;
-        var descricao = document.getElementById("descricao").value;
+        function editarInformacao(event) {
+            var index = event.target.dataset.index;
+            var informacao = db.dados[index];
 
-        if (editarIndex !== null) {
-            // Editar informação existente
-            db.dados[editarIndex].titulo = titulo;
-            db.dados[editarIndex].descricao = descricao;
-        } else {
-            // Adicionar nova informação
-            var novaInformacao = {
-                titulo: titulo,
-                descricao: descricao
-            };
+            document.getElementById("titulo").value = informacao.titulo;
+            document.getElementById("descricao").value = informacao.descricao;
 
-            db.dados.push(novaInformacao);
+            modalTitle.textContent = "Editar Registro";
+            modalForm.style.display = "block";
+            editarIndex = index;
         }
 
         exibirDados();
-
-        modalForm.style.display = "none";
-        formulario.reset();
-        editarIndex = null;
-    });
-
-    function exibirDados() {
-        var dadosContainer = document.getElementById("dados-container");
-        dadosContainer.innerHTML = "";
-
-        for (var i = 0; i < db.dados.length; i++) {
-            var titulo = db.dados[i].titulo;
-            var descricao = db.dados[i].descricao;
-
-            var elementoTitulo = document.createElement("h2");
-            elementoTitulo.textContent = titulo;
-
-            var elementoDescricao = document.createElement("p");
-            elementoDescricao.textContent = descricao;
-
-            var btnExcluir = document.createElement("button");
-            btnExcluir.textContent = "Excluir";
-            btnExcluir.dataset.index = i;
-            btnExcluir.addEventListener("click", excluirInformacao);
-
-            var btnEditar = document.createElement("button");
-            btnEditar.textContent = "Editar";
-            btnEditar.dataset.index = i;
-            btnEditar.addEventListener("click", editarInformacao);
-
-            var hr = document.createElement("hr");
-
-            dadosContainer.appendChild(elementoTitulo);
-            dadosContainer.appendChild(elementoDescricao);
-            dadosContainer.appendChild(btnExcluir);
-            dadosContainer.appendChild(btnEditar);
-            dadosContainer.appendChild(hr);
-        }
-    }
-
-    function excluirInformacao(event) {
-        var index = event.target.dataset.index;
-        db.dados.splice(index, 1);
-        exibirDados();
-    }
-
-    function editarInformacao(event) {
-        var index = event.target.dataset.index;
-        var informacao = db.dados[index];
-
-        document.getElementById("titulo").value = informacao.titulo;
-        document.getElementById("descricao").value = informacao.descricao;
-
-        modalTitle.textContent = "Editar Registro";
-        modalForm.style.display = "block";
-        editarIndex = index;
-    }
-
-    exibirDados();
-</script>
+    </script>
 
     <footer>
         <p>&copy; 2023 - Todos os direitos reservados.</p>

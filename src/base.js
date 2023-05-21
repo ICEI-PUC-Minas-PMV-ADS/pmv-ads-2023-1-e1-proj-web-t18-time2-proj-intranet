@@ -1,23 +1,23 @@
 var db = {
     dados: [
         {
-            titulo: 'titulo da noticia',
+            titulo: 'Inauguração de nova filial',
             descricao: 'Postas de robalo feitas na farinha de trigo. Acompanha arroz e batatas',
 
         }, {
-            titulo: 'Agua com gás',
+            titulo: 'Horários especiais de feriado',
             descricao: 'Agua mineral gaseificada naturalmente da fonte de hidrópolis. Muito saudável',
 
         }, {
-            titulo: 'Bife a cavalo',
+            titulo: 'Atualização do manual da marca',
             descricao: 'Escalopes de filé, grelhados com ovo frito por cima. Arroz e batatas',
 
         }, {
-            titulo: 'Regrigerante guarana',
+            titulo: 'Nova politica de viagens',
             descricao: 'Guarana da amazonia feito a partir de culturas organicas',
 
         }, { 
-            titulo: 'Doce de leite',
+            titulo: 'Banco de horas',
             descricao: 'Porçao de doce de leie feito artesanalmente feito em minas gerais',
         }
     ]
