@@ -57,7 +57,7 @@
         </ul>
     </nav>
     <main>
-        <h1>Notícias e atualizações</h1>
+        <h1>Notícias e avisos</h1>
         <p>Aqui você encontrará as últimas notícias e atualizações da empresa.</p>
 
 
@@ -91,84 +91,40 @@
 
             <ul>
                 <li>
-                    <h4>Acesso rápido</h4>
+                    <h4>Lembretes</h4>
                 </li>
 
+                <li>
+                    <h4>Atenção aos prazos</h4>
+                    <p>Confirta os prazos de envio dos relatórios</p>
+                    <p><a href="#">Leia mais</a></p>
+                </li>
+                <li>
+                    <h4>Banco de horas</h4>
+                    <p>Manter o registro de ponto</p>
+                    <p><a href="#">Leia mais</a></p>
+                </li>
                 <li>
                     <h4>Como utilizar a intranet?</h4>
                     <p>Confirta todas as funcionalidades</p>
                     <p><a href="#">Leia mais</a></p>
                 </li>
-                <li>
-                    <h4>Melhores práticas</h4>
-                    <p>Descrição breve melhores práticas</p>
-                    <p><a href="#">Leia mais</a></p>
-                </li>
-                <li>
-                    <h4>Guia operacional rápido</h4>
-                    <p>Como otimizar sua experiência</p>
-                    <p><a href="#">Leia mais</a></p>
-                </li>
             </ul>
         </section>
 
-<section>
+        <section>
 
 
-        <h1>Calendário</h1>
+            <h1>Calendário</h1>
+        </section>
         <iframe src="https://calendar.google.com/calendar/embed?src=seu-email%40gmail.com&ctz=America%2FSao_Paulo"
             style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-   
-        </section>
-        </main>
+
+
+    </main>
 
 
 
-
-
-    <script>
-        const logoUpload = document.getElementById('logo-upload');
-        const logoContainer = document.querySelector('.logo-container');
-
-        logoUpload.addEventListener('change', (event) => {
-            const file = event.target.files[0];
-            const reader = new FileReader();
-
-            reader.addEventListener('load', () => {
-                const logo = document.createElement('img');
-                logo.src = reader.result;
-                logo.alt = 'Nova logo da empresa';
-                logoContainer.innerHTML = '';
-                logoContainer.appendChild(logo);
-            });
-
-            reader.readAsDataURL(file);
-        });
-
-
-        const absenceForm = document.querySelector('form');
-        const absenceSection = document.querySelector('.absences');
-
-        absenceForm.addEventListener('submit', (event) => {
-            event.preventDefault();
-
-            const startDate = event.target.elements['absence-start'].value;
-            const endDate = event.target.elements['absence-end'].value;
-            const reason = event.target.elements['absence-reason'].value;
-
-            absenceSection.innerHTML = `
-    <h2>Informações de ausência</h2>
-    <p>
-      Colaborador ausente de ${startDate} a ${endDate} por motivo de ${reason}.
-    </p>
-  `;
-
-            event.target.reset();
-        });
-
-
-
-    </script>
 
 
     <script src="base.js"></script>
