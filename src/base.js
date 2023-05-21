@@ -2,23 +2,23 @@ var db = {
     dados: [
         {
             titulo: 'Inauguração de nova filial',
-            descricao: 'Postas de robalo feitas na farinha de trigo. Acompanha arroz e batatas',
+            descricao: 'Nova sede da empresa é inaugurada em Caratinga-MG no dia 21/05/2023',
 
         }, {
             titulo: 'Horários especiais de feriado',
-            descricao: 'Agua mineral gaseificada naturalmente da fonte de hidrópolis. Muito saudável',
+            descricao: 'Nao haverá expediente durante a proxima semana',
 
         }, {
             titulo: 'Atualização do manual da marca',
-            descricao: 'Escalopes de filé, grelhados com ovo frito por cima. Arroz e batatas',
+            descricao: 'Confira o manual completo em Intranet > Marketing',
 
         }, {
             titulo: 'Nova politica de viagens',
-            descricao: 'Guarana da amazonia feito a partir de culturas organicas',
+            descricao: 'Uma nova versão do manual de viagens esta disponível me donwloads',
 
         }, { 
             titulo: 'Banco de horas',
-            descricao: 'Porçao de doce de leie feito artesanalmente feito em minas gerais',
+            descricao: 'Saldo de banco de horas atualizado',
         }
     ]
 }
