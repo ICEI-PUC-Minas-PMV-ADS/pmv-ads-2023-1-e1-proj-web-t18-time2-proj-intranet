@@ -40,54 +40,6 @@
         });
       });
 
-/* solicitação de indicadores do Bacen (Luan: nao consegui fazer funcionar):
-
-			$.ajax({
-				url: "https://api.bcb.gov.br/dados/serie/bcdata.sgs.11/dados/ultimos/1?formato=json",
-				headers: {
-					"Authorization": "Basic " + btoa("usuario:senha")
-				},
-				success: function(result) {
-					$("#cdi").text(result[0].valor.toFixed(2).replace(".", ","));
-					$("#taxas").show();
-				}
-			});
-
-			$.ajax({
-				url: "https://api.bcb.gov.br/dados/serie/bcdata.sgs.4390/dados/ultimos/1?formato=json",
-				headers: {
-					"Authorization": "Basic " + btoa("usuario:senha")
-				},
-				success: function(result) {
-					$("#selic").text(result[0].valor.toFixed(2).replace(".", ","));
-					$("#taxas").show();
-				}
-			});
-
-			$.ajax({
-				url: "https://api.bcb.gov.br/dados/serie/bcdata.sgs.13522/dados/ultimos/1?formato=json",
-				headers: {
-					"Authorization": "Basic " + btoa("usuario:senha")
-				},
-				success: function(result) {
-					$("#ipca").text(result[0].valor.toFixed(2).replace(".", ","));
-					$("#inpc").text("N/A");
-					$("#indices").show();
-				}
-			});
-
-			$.ajax({
-				url: "https://api.bcb.gov.br/dados/serie/bcdata.sgs.189/dados/ultimos/1?formato=json",
-				headers: {
-					"Authorization": "Basic " + btoa("usuario:senha")
-				},
-				success: function(result) {
-					$("#igpm").text(result[0].valor.toFixed(2).replace(".", ","));
-					$("#indices").show();
-				}
-			});
-
-*/
 
     </script>
     <style>
@@ -253,40 +205,9 @@
           </table>
           
 
-          <table id="taxas">
-            <tr>
-              <th>Taxa</th>
-              <th>Valor</th>
-            </tr>
-            <tr>
-              <td>CDI</td>
-              <td id="cdi">Carregando...</td>
-            </tr>
-            <tr>
-              <td>Selic</td>
-              <td id="selic">Carregando...</td>
-            </tr>
-          </table>
-          
 
-          <table id="indices">
-            <tr>
-              <th>Índice</th>
-              <th>Valor</th>
-            </tr>
-            <tr>
-              <td>IPCA</td>
-              <td id="ipca">Carregando...</td>
-            </tr>
-            <tr>
-              <td>IGPM</td>
-              <td id="igpm">Carregando...</td>
-            </tr>
-            <tr>
-              <td>INPC</td>
-              <td id="inpc">Carregando...</td>
-            </tr>
-          </table>
+
+
           </div>
 
         </table>
@@ -294,9 +215,17 @@
 
     </main>
     
+<h1>Ferramentas financeiras</h1>
 
-
-    
+<br>
+<br>
+   
+    <iframe src="https://br.widgets.investing.com/top-cryptocurrencies?theme=lightTheme&hideTitle=true&roundedCorners=true&cols=symbol,priceUsd,priceBtc,chg24" width="100%" height="100%" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"></iframe><div class="poweredBy" style="font-family: Arial, Helvetica, sans-serif;">Desenvolvido por <a href="https://br.investing.com?utm_source=WMT&amp;utm_medium=referral&amp;utm_campaign=TOP_CRYPTOCURRENCIES&amp;utm_content=Footer%20Link" target="_blank" rel="nofollow">Investing.com</a></div>
+    <br>
+    <table>
+    <iframe src="https://br.widgets.investing.com/live-currency-cross-rates?theme=lightTheme" width="100%" height="100%" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"></iframe><div class="poweredBy" style="font-family: Arial, Helvetica, sans-serif;">Desenvolvido por <a href="https://br.investing.com?utm_source=WMT&amp;utm_medium=referral&amp;utm_campaign=LIVE_CURRENCY_X_RATES&amp;utm_content=Footer%20Link" target="_blank" rel="nofollow">Investing.com</a></div> <iframe height="375" width="197" src="https://ssltools.investing.com/currency-converter/index.php?from=17&to=35&force_lang=12"></iframe><br /><table width="197"><tr><td><span style="font-size: 11px;color: #333333;text-decoration: none;">Conversor de Moedas fornecido por <a href="https://br.investing.com/" rel="nofollow" target="_blank" style="font-size: 11px;color: #06529D; font-weight: bold;" class="underline_link">Investing.com Brasil</a>.</span></td></tr></table>
+    <iframe frameborder="0" scrolling="no" height="425" width="430" allowtransparency="true" marginwidth="0" marginheight="0" src="https://ssltools.investing.com/margin-calculator/index.php?force_lang=12&acc=12&pair=1"></iframe><br /><div style="width:450"><a href="http://br.investing.com" target="_blank"><img src="https://wmt-invdn-com.investing.com/forexpros_pt_logo.png" alt="Investing.com" title="Investing.com" style="float:left" /></a><span style="float:right"><span style="font-size: 11px;color: #333333;text-decoration: none;">Calculadora de Margem fornecida por <a href="https://br.investing.com/" rel="nofollow" target="_blank" style="font-size: 11px;color: #06529D; font-weight: bold;" class="underline_link">Investing.com Brasil</a>.</span></span></div>
+  </table>
     <!-- Footer -->
     <footer>
       <p>&copy; 2023 - Projeto desenvolvido para o curso técnico de ADS Puc Minas</p>

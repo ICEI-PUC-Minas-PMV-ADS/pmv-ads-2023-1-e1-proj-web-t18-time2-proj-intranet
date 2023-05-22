@@ -9,7 +9,15 @@ body {
     color: #fff;
     padding: 20px;
   }
-
+  
+  .green-theme header {
+    background-color: green;
+  }
+  
+  .theme-selector {
+    margin-bottom: 10px;
+  }
+  
   
   nav {
     background-color: #f2f2f2;

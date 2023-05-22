@@ -5,6 +5,27 @@
     <title>Configurações - Intranet Corporativa</title>
     <link rel="stylesheet" href="style.css">
   </head>
+
+  <script>
+    function alterarImagem() {
+        var input = document.getElementById("imagemInput");
+        var imagem = document.getElementById("logo");
+
+        // Verifica se um arquivo foi selecionado
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                // Define o atributo src da imagem com a nova imagem selecionada
+                imagem.src = e.target.result;
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+
+
   <body>
     <!-- Header -->
     <header>
@@ -54,15 +75,20 @@
 
       <div class="intranet">
         <h2>Intranet</h2>
-        <form>
-          <label for="theme">Tema:</label>
-          <select id="theme" name="theme">
-            <option value="light">Azul</option>
-            <option value="dark">Cinza</option>
-            <option value="dark">Vermelho</option>   
-            <option value="dark">Verde</option>         
-          </select><br><br>
+        
+        
+        <div class="theme-selector">
+          <label for="theme">Selecionar tema:</label>
+          <select id="theme">
+            <option value="default">Padrão</option>
+            <option value="green">Verde</option>
+          </select>
+          <button id="applyThemeButton">Aplicar</button>
+        </div>
 
+
+
+          
           <input type="checkbox" id="notifications" name="notifications">
           <label for="notifications">Receber notificações</label><br><br>
 
@@ -71,16 +97,16 @@
           <br>
           <br>
           
-            <form action="#" method="post" enctype="multipart/form-data">
-                <label for="logo-upload">Alterar logo:</label>
-                <input type="file" id="logo-upload" name="logo">
-                <input type="submit" value="Salvar">
-            </form>
 
         </form>
 
+
         <br>
-        Atualização de contatos
+        <h2>Alterar logo</h2>
+        <br>
+        <input type="file" id="imagemInput">
+        <button onclick="alterarImagem()">Alterar Imagem</button>
+
 
       </div>
     </main>
@@ -91,6 +117,8 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="script.js"></script>
+
+ 
+
   </body>
 </html>
