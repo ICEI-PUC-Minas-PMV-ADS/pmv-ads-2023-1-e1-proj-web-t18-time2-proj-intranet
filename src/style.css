@@ -282,3 +282,25 @@ h4 {
   text-decoration: none;
   cursor: pointer;
 }
+
+#baixar:hover{
+
+  background-color: #71a4d8;
+  border-style:double
+  
+
+}
+
+#upload{
+  border-style: hidden;
+  background-color: transparent;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  size: 19cm;
+}
+
+#upload:hover{
+
+  transform: scale(1.2);
+    transition: all 0.4s;
+    text-decoration: underline;
+}

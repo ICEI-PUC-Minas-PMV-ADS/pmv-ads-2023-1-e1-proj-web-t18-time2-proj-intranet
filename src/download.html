@@ -40,32 +40,34 @@
 
     <div class="downloads">
       <h2>Arquivos</h2>
-      <ul>
-        <li><a href="#">Modelo de contrato</a></li>
-        <li><a href="#">Manual do usuário</a></li>
-        <li><a href="#">Planilha de controle financeiro</a></li>
-        <li><a href="#">Código de ética da empresa</a></li>
-        <li><a href="#">Estatuto</a></li>
-        <li><a href="#">Política de viagens</a></li>
-        <li><a href="#">Organograma</a></li>
-        <li><a href="#">Catálogo de produtos</a></li>
-        <li><a href="#">Material da marca (mkt)</a></li>
+      <ul><br>
+        <li><a id="baixar" href="dowload.pdf" download>Modelo de contrato</a></li>
+        <li><a id="baixar" href="dowload.pdf"download>Manual do usuário</a></li>
+        <li><a id="baixar" href="dowload.pdf"download>Planilha de controle financeiro</a></li>
+        <li><a id="baixar" href="dowload.pdf"download>Código de ética da empresa</a></li>
+        <li><a id="baixar" href="dowload.pdf"download>Estatuto</a></li>
+        <li><a id="baixar" href="dowload.pdf"download>Política de viagens</a></li>
+        <li><a id="baixar" href="dowload.pdf"download>Organograma</a></li>
+        <li><a id="baixar" href="dowload.pdf"download>Catálogo de produtos</a></li>
+        <li><a id="baixar" href="dowload.pdf"download>Material da marca (mkt)</a></li>
       </ul>
-    </div>
+    </div><br><br>
 
     <div class="programs">
       <h2>Programas</h2>
-      <ul>
-        <li><a href="#">Adobe Photoshop</a></li>
-        <li><a href="#">Microsoft Office</a></li>
-        <li><a href="#">AutoCAD</a></li>
+      <ul><br>
+        <li><a id="baixar" href="https://www.adobe.com/br/products/photoshop.html?sdid=KQPOO&mv=search&ef_id=CjwKCAjwpayjBhAnEiwA-7ena5lJq4y7BqtDIWSrATe9B7MDpdnTl7WseaoXNF9sIWDxizLfSnLkEBoCExQQAvD_BwE:G:s&s_kwcid=AL!3085!3!442396628309!e!!g!!adobe%20photoshop%20download!956047912!50099537680&gad=1&gclid=CjwKCAjwpayjBhAnEiwA-7ena5lJq4y7BqtDIWSrATe9B7MDpdnTl7WseaoXNF9sIWDxizLfSnLkEBoCExQQAvD_BwE">Adobe Photoshop</a></li>
+        <li><a id="baixar" href="https://www.office.com/?auth=1">Microsoft Office</a></li>
+        <li><a id="baixar" href="https://www.autodesk.com.br/products/autocad/overview?panel=buy&AID=12904993&PID=8299320&SID=jkp_CjwKCAjwpayjBhAnEiwA-7ena07vGcDisKCTMVfFJAYIeAopRQvMMZRsyA_7ta1Okp_XkB52-3hWAhoCcRwQAvD_BwE&cjevent=7c6a63d6f8af11ed83ca021b0a82b820&affname=8299320_12904993&term=1-YEAR&tab=subscription&plc=ACDIST">AutoCAD</a></li>
       </ul>
-    </div>
+    </div><br><br>
 
     <div class="Importar">
       <h2>Importar</h2>
       <ul>
-        <li><a href="#">Importar novo arquivo</a></li>
+        <form action="/upload" id="form1" method="post" enctype="multipart/form-data">
+          <input type="file" id="fileInput" name="fileUploaded" hidden="true" />
+          <input type="submit" value="Enviar arquivo" id="upload" />
 
       </ul>
     </div>

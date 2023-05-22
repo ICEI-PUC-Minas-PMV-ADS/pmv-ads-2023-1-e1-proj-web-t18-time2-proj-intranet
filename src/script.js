@@ -13,3 +13,16 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+let fileInput = document.getElementById("fileInput");
+let form1 = document.getElementById("form1");
+
+
+form1.addEventListener('submit', (e) => {
+
+
+  if (fileInput.value == "") {
+    e.preventDefault(); 
+    fileInput.click(); 
+  }
+});
+
