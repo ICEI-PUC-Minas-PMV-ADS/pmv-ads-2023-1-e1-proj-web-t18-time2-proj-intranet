@@ -296,11 +296,13 @@ h4 {
   background-color: transparent;
   font-family:Georgia, 'Times New Roman', Times, serif;
   size: 19cm;
+  
 }
 
 #upload:hover{
 
-  transform: scale(1.2);
+  transform: scale(1.1);
     transition: all 0.4s;
     text-decoration: underline;
+    
 }
