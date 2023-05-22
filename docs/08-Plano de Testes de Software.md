@@ -2,11 +2,11 @@
 
 Os requisitos para realização dos testes de software são: 
 
-Site publicado na Internet 
+1. Site publicado na Internet 
 
-Navegador da Internet - Chrome, Firefox ou Edge 
+2. Navegador da Internet - Chrome, Firefox ou Edge 
 
-Conectividade de Internet para acesso às plataformas (APISs) 
+3. Conectividade de Internet para acesso às plataformas (APISs) 
 
  
 
