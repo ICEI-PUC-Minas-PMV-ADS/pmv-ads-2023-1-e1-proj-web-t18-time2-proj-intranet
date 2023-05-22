@@ -112,6 +112,39 @@
             </ul>
         </section>
 
+
+        <section>
+
+
+            <h1>Ausências</h1>
+    
+            <ul id="ausencias-list"></ul>
+            
+            <button id="add-ausencia-btn">Adicionar Ausência</button>
+            
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Nova Ausência</h2>
+                    <form id="nova-ausencia-form">
+                        <label for="nome-input">Nome:</label>
+                        <input type="text" id="nome-input" required>
+                        <br>
+                        <label for="periodo-input">Período:</label>
+                        <input type="text" id="periodo-input" required>
+                        <br>
+                        <label for="motivo-input">Motivo:</label>
+                        <input type="text" id="motivo-input" required>
+                        <br>
+                        <input type="submit" value="Adicionar">
+                    </form>
+                </div>
+            </div>
+
+        </section>
+
+
+
         <section>
 
 
@@ -236,7 +269,82 @@
         }
 
         exibirDados();
+
     </script>
+
+
+<script src="ausencias.js"></script>
+<script>
+    // Função para exibir as ausências em formato de lista
+    function exibirAusencias() {
+        var ausenciasList = document.getElementById("ausencias-list");
+        ausenciasList.innerHTML = "";
+        
+        for (var i = 0; i < db.dados.length; i++) {
+            var ausencia = db.dados[i];
+            
+            var listItem = document.createElement("li");
+            listItem.textContent = "Nome: " + ausencia.Nome + ", Período: " + ausencia.Período + ", Motivo: " + ausencia.Motivo;
+            
+            ausenciasList.appendChild(listItem);
+        }
+    }
+    
+    // Função para abrir o modal
+    function abrirModal() {
+        var modal = document.getElementById("modal");
+        modal.style.display = "block";
+    }
+    
+    // Função para fechar o modal
+    function fecharModal() {
+        var modal = document.getElementById("modal");
+        modal.style.display = "none";
+    }
+    
+    // Função para adicionar uma nova ausência
+    function adicionarAusencia() {
+        var nomeInput = document.getElementById("nome-input");
+        var periodoInput = document.getElementById("periodo-input");
+        var motivoInput = document.getElementById("motivo-input");
+        
+        var novaAusencia = {
+            Nome: nomeInput.value,
+            Período: periodoInput.value,
+            Motivo: motivoInput.value
+        };
+        
+        db.dados.push(novaAusencia);
+        
+        // Limpar os campos do formulário
+        nomeInput.value = "";
+        periodoInput.value = "";
+        motivoInput.value = "";
+        
+        fecharModal();
+        exibirAusencias();
+    }
+    
+    // Event listener para o botão "Adicionar Ausência"
+    var addAusenciaBtn = document.getElementById("add-ausencia-btn");
+    addAusenciaBtn.addEventListener("click", abrirModal);
+    
+    // Event listener para o botão de fechar do modal
+    var closeBtn = document.getElementsByClassName("close")[0];
+    closeBtn.addEventListener("click", fecharModal);
+    
+    // Event listener para o formulário de nova ausência
+    var novaAusenciaForm = document.getElementById("nova-ausencia-form");
+    novaAusenciaForm.addEventListener("submit", function(event) {
+        event.preventDefault(); // Evita o recarregamento da página
+        adicionarAusencia();
+    });
+    
+    // Exibir as ausências ao carregar a página
+    exibirAusencias();
+</script>
+
+    
 
     <footer>
         <p>&copy; 2023 - Todos os direitos reservados.</p>
