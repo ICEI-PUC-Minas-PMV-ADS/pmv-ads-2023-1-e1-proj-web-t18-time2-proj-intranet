@@ -1,19 +1,93 @@
 # Plano de Testes de Software
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>
+Os requisitos para realização dos testes de software são: 
 
-Apresente os cenários de testes utilizados na realização dos testes da sua aplicação. Escolha cenários de testes que demonstrem os requisitos sendo satisfeitos.
+1. Site publicado na Internet 
 
-Enumere quais cenários de testes foram selecionados para teste. Neste tópico o grupo deve detalhar quais funcionalidades avaliadas, o grupo de usuários que foi escolhido para participar do teste e as ferramentas utilizadas.
+2. Navegador da Internet - Chrome, Firefox ou Edge 
+
+3. Conectividade de Internet para acesso às plataformas (APISs) 
+
  
-## Ferramentas de Testes (Opcional)
-
-Comente sobre as ferramentas de testes utilizadas.
  
-> **Links Úteis**:
-> - [IBM - Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Práticas e Técnicas de Testes Ágeis](http://assiste.serpro.gov.br/serproagil/Apresenta/slides.pdf)
-> -  [Teste de Software: Conceitos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/)
-> - [Criação e Geração de Planos de Teste de Software](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
-> - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
+
+Os testes funcionais a serem realizados no aplicativo são descritos a seguir. 
+
+ 
+
+Caso de Teste 
+
+CT-01 - Visualizar home-page 
+
+Requisitos Associados 
+
+RF-01 - O site deve apresentar na página principal no formato de "feed" com as notícias postadas 
+
+RF-03 - O site precisará ter um calendário para gestão de eventos da empresa 
+
+RF-05 - O site deve permitir a criação de um lembrete do dia que aparecerá na tela do usuário 
+
+RF-07 - O site deve permitir a setorização de informações 
+
+RF-08 - O site precisará ter um local para que possam ser inclusos informações de ausência na empresa 
+
+Objetivo do Teste 
+
+Verificar se a carga de notícias está acontecendo corretamente 
+
+Passos 
+
+1) Acessar o Navegador 
+
+2) Informar o endereço do Site 
+
+3) Acessar com login 
+
+4) Visualizar página inicial 
+
+Critérios de Êxito 
+
+Deve haver uma requisição AJAX no painel NETWORK das ferramentas do Desenvolvedor (recurso do Navegador). 
+
+As notícias devem ser exibidas corretamente no site, sendo necessárias pelo menos 3 notícias sendo apresentadas 
+
+O calendário deverá estar operacional 
+
+Deverão aparecer os lembretes na tela  
+
+Deverá contar as informações setorizadas com diferentes acessos 
+
+ 
+
+ 
+
+Caso de Teste 
+
+CT-02 – Acesso a funcionalidades 
+
+Requisitos Associados 
+
+RF-02 - O site deve permitir a personalização de cores e logo 
+
+Objetivo do Teste 
+
+Verificar se existe a possibilidade de personalização do site 
+
+Passos 
+
+1) Acessar o Navegador 
+
+2) Informar o endereço do Site 
+
+3) Acessar com login 
+
+4) Visualizar página inicial 
+
+5) Acessar a aba “Configurações 
+
+ 
+
+Critérios de Êxito 
+
+Deverá ser possível realizar a personalização da Logo. 
+
