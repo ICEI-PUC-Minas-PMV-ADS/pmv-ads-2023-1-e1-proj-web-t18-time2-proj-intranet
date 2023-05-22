@@ -112,14 +112,12 @@
             </ul>
         </section>
 
-
-        <section>
-
-
+<section>
+<nav>
             <h1>Ausências</h1>
     
             <ul id="ausencias-list"></ul>
-            
+    
             <button id="add-ausencia-btn">Adicionar Ausência</button>
             
             <div id="modal" class="modal">
@@ -127,6 +125,7 @@
                     <span class="close">&times;</span>
                     <h2>Nova Ausência</h2>
                     <form id="nova-ausencia-form">
+                        <br>
                         <label for="nome-input">Nome:</label>
                         <input type="text" id="nome-input" required>
                         <br>
@@ -136,15 +135,15 @@
                         <label for="motivo-input">Motivo:</label>
                         <input type="text" id="motivo-input" required>
                         <br>
+                        <br>
                         <input type="submit" value="Adicionar">
                     </form>
                 </div>
             </div>
 
-        </section>
 
-
-
+        </nav>
+    </section>
         <section>
 
 
@@ -272,7 +271,6 @@
 
     </script>
 
-
 <script src="ausencias.js"></script>
 <script>
     // Função para exibir as ausências em formato de lista
@@ -284,7 +282,25 @@
             var ausencia = db.dados[i];
             
             var listItem = document.createElement("li");
-            listItem.textContent = "Nome: " + ausencia.Nome + ", Período: " + ausencia.Período + ", Motivo: " + ausencia.Motivo;
+            listItem.classList.add("ausencia-item");
+            
+            var nomeParagraph = document.createElement("p");
+            nomeParagraph.textContent = "Nome: " + ausencia.Nome;
+            listItem.appendChild(nomeParagraph);
+            
+            var periodoParagraph = document.createElement("p");
+            periodoParagraph.textContent = "Período: " + ausencia.Período;
+            listItem.appendChild(periodoParagraph);
+            
+            var motivoParagraph = document.createElement("p");
+            motivoParagraph.textContent = "Motivo: " + ausencia.Motivo;
+            listItem.appendChild(motivoParagraph);
+            
+            var deleteButton = document.createElement("button");
+            deleteButton.classList.add("delete-btn");
+            deleteButton.textContent = "Excluir";
+            deleteButton.addEventListener("click", criarExclusaoAusenciaHandler(i));
+            listItem.appendChild(deleteButton);
             
             ausenciasList.appendChild(listItem);
         }
@@ -322,6 +338,19 @@
         motivoInput.value = "";
         
         fecharModal();
+        exibirAusencias();
+    }
+    
+    // Função para criar um handler para exclusão de uma ausência
+    function criarExclusaoAusenciaHandler(index) {
+        return function() {
+            excluirAusencia(index);
+        }
+    }
+    
+    // Função para excluir uma ausência
+    function excluirAusencia(index) {
+        db.dados.splice(index, 1);
         exibirAusencias();
     }
     

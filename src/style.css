@@ -254,3 +254,31 @@ h1{
 h4 {
   color: #003366;
 }
+
+
+.ausencia-item {
+  margin-bottom: 10px;
+}
+
+.ausencia-item p {
+  margin: 0;
+}
+
+.delete-btn {
+  margin-left: 10px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
