@@ -5,6 +5,32 @@
     <meta charset="UTF-8">
     <title>Lembretes - Intranet Corporativa</title>
     <link rel="stylesheet" href="style.css">
+    <script src="login.js"></script>
+    <script>
+        if (!usuarioCorrente.login) {
+            window.location.href = LOGIN_URL;
+        }
+
+        function exibeUsuarios() {
+            let Listausuarios = '';
+            for (i - 0; i < db_usuarios.usuarios.legth; i++) {
+                let usuarioo = db_usuarios.usuarios[i];
+                Listausuarios += `<tr><td scope="row">${usuario.nome}</td><td>${usuario.login}</td><td>${usuario.email}</td></tr>`;
+            }
+
+            document.getElementById("table-usuarios").innerHTML = Listausuarios
+        }
+
+        function initPage() {
+            document.getElementById('btn_logout').addEventListener('click', logoutUser);
+
+            document.getElementById('nomeUsuario').innerHTML = usuarioCorrente.nome;
+
+            exibeUsuarios();
+        }
+
+        window.addEventListener('load', initPage);
+    </script>
 </head>
 
 <body>
