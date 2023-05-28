@@ -56,7 +56,7 @@
     <!-- Header -->
     <header>
         <div class="logo-container">
-          <img src="logo.png" alt="Logo da empresa" height="100" >
+          <img src="logo.png" alt="Logo" height="100" >
         </div>
         <h1>Bem-vindo à Intranet Corporativa</h1>
   
@@ -126,14 +126,36 @@
 
         </form>
 
+        <title>Alterar Imagem</title>
+        <script>
+            function alterarImagem() {
+                var input = document.getElementById("imagemInput");
+                var imagem = document.getElementById("logo");
+    
+                // Verifica se um arquivo foi selecionado
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+    
+                    reader.onload = function(e) {
+                        // Define o atributo src da imagem com a nova imagem selecionada
+                        imagem.src = e.target.result;
+                    };
+    
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Alterar Logo</h1>
+        Prévia: <br>
 
-        <br>
-        <h2>Alterar logo</h2>
+        <img id="logo" src="logo.png" alt="Logo" height="100">
         <br>
         <input type="file" id="imagemInput">
         <button onclick="alterarImagem()">Alterar Imagem</button>
-
-
+        <button> Salvar imagem</button>
+    </body>
       </div>
     </main>
 

@@ -45,7 +45,7 @@ Deverá ser iniciado o arquivo no caminho: src/loginn.html
 
 # Hospedagem
 
-[* Insira o endereço eletrônico público de acesso ao conteúdo publicado. ](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t18-time2-proj-intranet.git)
+Link para o Site: (https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2023-1-e1-proj-web-t18-time2-proj-intranet/index.html)
 
 # Armazenamento do Código-Fonte
 
