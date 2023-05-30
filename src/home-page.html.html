@@ -341,99 +341,116 @@ function editarInformacao(event) {
         function exibirAusencias() {
             var ausenciasList = document.getElementById("ausencias-list");
             ausenciasList.innerHTML = "";
-
+    
             for (var i = 0; i < db.dados.length; i++) {
                 var ausencia = db.dados[i];
-
+    
                 var listItem = document.createElement("li");
                 listItem.classList.add("ausencia-item");
-
+    
                 var nomeParagraph = document.createElement("p");
                 nomeParagraph.textContent = "Nome: " + ausencia.Nome;
                 listItem.appendChild(nomeParagraph);
-
+    
                 var periodoParagraph = document.createElement("p");
                 periodoParagraph.textContent = "Período: " + ausencia.Período;
                 listItem.appendChild(periodoParagraph);
-
+    
                 var motivoParagraph = document.createElement("p");
                 motivoParagraph.textContent = "Motivo: " + ausencia.Motivo;
                 listItem.appendChild(motivoParagraph);
-
+    
                 var deleteButton = document.createElement("button");
                 deleteButton.classList.add("delete-btn");
                 deleteButton.textContent = "Excluir";
                 deleteButton.addEventListener("click", criarExclusaoAusenciaHandler(i));
                 listItem.appendChild(deleteButton);
-
+    
                 ausenciasList.appendChild(listItem);
             }
         }
-
+    
         // Função para abrir o modal
         function abrirModal() {
             var modal = document.getElementById("modal");
             modal.style.display = "block";
         }
-
+    
         // Função para fechar o modal
         function fecharModal() {
             var modal = document.getElementById("modal");
             modal.style.display = "none";
         }
-
+    
         // Função para adicionar uma nova ausência
         function adicionarAusencia() {
             var nomeInput = document.getElementById("nome-input");
             var periodoInput = document.getElementById("periodo-input");
             var motivoInput = document.getElementById("motivo-input");
-
+    
             var novaAusencia = {
                 Nome: nomeInput.value,
                 Período: periodoInput.value,
                 Motivo: motivoInput.value
             };
-
+    
             db.dados.push(novaAusencia);
-
+    
             // Limpar os campos do formulário
             nomeInput.value = "";
             periodoInput.value = "";
             motivoInput.value = "";
-
+    
+            salvarDados(); // Salvar os dados atualizados
             fecharModal();
             exibirAusencias();
         }
-
+    
         // Função para criar um handler para exclusão de uma ausência
         function criarExclusaoAusenciaHandler(index) {
             return function () {
                 excluirAusencia(index);
             }
         }
-
+    
         // Função para excluir uma ausência
         function excluirAusencia(index) {
             db.dados.splice(index, 1);
+            salvarDados(); // Salvar os dados atualizados
             exibirAusencias();
         }
-
+    
+        // Função para salvar os dados no armazenamento local
+        function salvarDados() {
+            var dadosJSON = JSON.stringify(db.dados);
+            localStorage.setItem("ausenciasData", dadosJSON);
+        }
+    
+        // Função para carregar os dados do armazenamento local
+        function carregarDados() {
+            var dadosJSON = localStorage.getItem("ausenciasData");
+            if (dadosJSON) {
+                db.dados = JSON.parse(dadosJSON);
+            }
+        }
+    
         // Event listener para o botão "Adicionar Ausência"
         var addAusenciaBtn = document.getElementById("add-ausencia-btn");
         addAusenciaBtn.addEventListener("click", abrirModal);
-
+    
         // Event listener para o botão de fechar do modal
         var closeBtn = document.getElementsByClassName("close")[0];
         closeBtn.addEventListener("click", fecharModal);
-
+    
         // Event listener para o formulário de nova ausência
         var novaAusenciaForm = document.getElementById("nova-ausencia-form");
         novaAusenciaForm.addEventListener("submit", function (event) {
             event.preventDefault(); // Evita o recarregamento da página
             adicionarAusencia();
         });
-
-        // Exibir as ausências ao carregar a página
+    
+        // Carregar os dados ao carregar a página
+        carregarDados();
         exibirAusencias();
     </script>
 
