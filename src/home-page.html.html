@@ -378,9 +378,9 @@ function editarInformacao(event) {
     
         // Função para fechar o modal
         function fecharModal() {
-            var modal = document.getElementById("modal");
-            modal.style.display = "none";
-        }
+  var modal = document.getElementById("modal");
+  modal.style.display = "none";
+}
     
         // Função para adicionar uma nova ausência
         function adicionarAusencia() {
@@ -439,7 +439,8 @@ function editarInformacao(event) {
         addAusenciaBtn.addEventListener("click", abrirModal);
     
         // Event listener para o botão de fechar do modal
-        var closeBtn = document.getElementsByClassName("close")[0];
+        var modal = document.getElementById("modal");
+        var closeBtn = modal.querySelector(".close");
         closeBtn.addEventListener("click", fecharModal);
     
         // Event listener para o formulário de nova ausência
