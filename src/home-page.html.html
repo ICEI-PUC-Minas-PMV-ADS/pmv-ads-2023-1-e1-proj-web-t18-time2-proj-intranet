@@ -161,14 +161,41 @@
 
     <script src="base.js"></script>
     <script>
+        var db = {
+    dados: [
+        {
+            titulo: 'Inauguração de nova filial',
+            descricao: 'Nova sede da empresa é inaugurada em Caratinga-MG no dia 21/05/2023',
+
+        }, {
+            titulo: 'Horários especiais de feriado',
+            descricao: 'Nao haverá expediente durante a proxima semana',
+
+        }, {
+            titulo: 'Atualização do manual da marca',
+            descricao: 'Confira o manual completo em Intranet > Marketing',
+
+        }, {
+            titulo: 'Nova politica de viagens',
+            descricao: 'Uma nova versão do manual de viagens esta disponível me donwloads',
+
+        }, { 
+            titulo: 'Banco de horas',
+            descricao: 'Saldo de banco de horas atualizado',
+        }
+    ]
+}
+
+
         var botaoAdicionar = document.getElementById("botao-adicionar");
         var modalForm = document.getElementById("modal-form");
         var closeModal = document.getElementsByClassName("close")[0];
         var formulario = document.getElementById("formulario");
         var modalTitle = document.getElementById("modal-title");
+        
 
         var editarIndex = null; // Índice da informação a ser editada
-
+       
         botaoAdicionar.addEventListener("click", function () {
             modalTitle.textContent = "Nova Notícia";
             modalForm.style.display = "block";
@@ -181,93 +208,130 @@
             formulario.reset();
         });
 
-        window.addEventListener("click", function (event) {
-            if (event.target == modalForm) {
-                modalForm.style.display = "none";
-                formulario.reset();
-            }
-        });
+        
 
-        formulario.addEventListener("submit", function (event) {
-            event.preventDefault();
+        // Função para salvar os dados no armazenamento local
+function salvarDados() {
+  localStorage.setItem('dados', JSON.stringify(db.dados));
+}
 
-            var titulo = document.getElementById("titulo").value;
-            var descricao = document.getElementById("descricao").value;
+// Função para carregar os dados do armazenamento local
+function carregarDados() {
+  var dados = localStorage.getItem('dados');
+  if (dados) {
+    db.dados = JSON.parse(dados);
+  }
+}
 
-            if (editarIndex !== null) {
-                // Editar informação existente
-                db.dados[editarIndex].titulo = titulo;
-                db.dados[editarIndex].descricao = descricao;
-            } else {
-                // Adicionar nova informação
-                var novaInformacao = {
-                    titulo: titulo,
-                    descricao: descricao
-                };
+// Carregar os dados ao carregar a página
+window.addEventListener('load', function() {
+  carregarDados();
+  exibirDados();
+});
 
-                db.dados.push(novaInformacao);
-            }
+// Adicionar o evento de submit do formulário
+formulario.addEventListener('submit', function(event) {
+  event.preventDefault();
 
-            exibirDados();
+  var titulo = document.getElementById('titulo').value;
+  var descricao = document.getElementById('descricao').value;
 
-            modalForm.style.display = "none";
-            formulario.reset();
-            editarIndex = null;
-        });
+  if (editarIndex !== null) {
+    // Editar informação existente
+    db.dados[editarIndex].titulo = titulo;
+    db.dados[editarIndex].descricao = descricao;
+  } else {
+    // Adicionar nova informação
+    var novaInformacao = {
+      titulo: titulo,
+      descricao: descricao
+    };
 
-        function exibirDados() {
-            var dadosContainer = document.getElementById("dados-container");
-            dadosContainer.innerHTML = "";
+    db.dados.push(novaInformacao);
+  }
 
-            for (var i = 0; i < db.dados.length; i++) {
-                var titulo = db.dados[i].titulo;
-                var descricao = db.dados[i].descricao;
+  salvarDados();
 
-                var elementoTitulo = document.createElement("h2");
-                elementoTitulo.textContent = titulo;
+  modalForm.style.display = 'none';
+  formulario.reset();
+  editarIndex = null;
 
-                var elementoDescricao = document.createElement("p");
-                elementoDescricao.textContent = descricao;
+  exibirDados();
+});
 
-                var btnExcluir = document.createElement("button");
-                btnExcluir.textContent = "Excluir";
-                btnExcluir.dataset.index = i;
-                btnExcluir.addEventListener("click", excluirInformacao);
+// Atualizar a função de exibir os dados para utilizar o armazenamento local
+function exibirDados() {
+  var dadosContainer = document.getElementById('dados-container');
+  dadosContainer.innerHTML = '';
 
-                var btnEditar = document.createElement("button");
-                btnEditar.textContent = "Editar";
-                btnEditar.dataset.index = i;
-                btnEditar.addEventListener("click", editarInformacao);
+  for (var i = 0; i < db.dados.length; i++) {
+    var titulo = db.dados[i].titulo;
+    var descricao = db.dados[i].descricao;
 
-                var hr = document.createElement("hr");
+    var elementoTitulo = document.createElement('h2');
+    elementoTitulo.textContent = titulo;
 
-                dadosContainer.appendChild(elementoTitulo);
-                dadosContainer.appendChild(elementoDescricao);
-                dadosContainer.appendChild(btnExcluir);
-                dadosContainer.appendChild(btnEditar);
-                dadosContainer.appendChild(hr);
-            }
-        }
+    var elementoDescricao = document.createElement('p');
+    elementoDescricao.textContent = descricao;
 
-        function excluirInformacao(event) {
-            var index = event.target.dataset.index;
-            db.dados.splice(index, 1);
-            exibirDados();
-        }
+    var btnExcluir = document.createElement('button');
+    btnExcluir.textContent = 'Excluir';
+    btnExcluir.dataset.index = i;
+    btnExcluir.addEventListener('click', excluirInformacao);
 
-        function editarInformacao(event) {
-            var index = event.target.dataset.index;
-            var informacao = db.dados[index];
+    var btnEditar = document.createElement('button');
+    btnEditar.textContent = 'Editar';
+    btnEditar.dataset.index = i;
+    btnEditar.addEventListener('click', editarInformacao);
 
-            document.getElementById("titulo").value = informacao.titulo;
-            document.getElementById("descricao").value = informacao.descricao;
+    var hr = document.createElement('hr');
 
-            modalTitle.textContent = "Editar Registro";
-            modalForm.style.display = "block";
-            editarIndex = index;
-        }
+    dadosContainer.appendChild(elementoTitulo);
+    dadosContainer.appendChild(elementoDescricao);
+    dadosContainer.appendChild(btnExcluir);
+    dadosContainer.appendChild(btnEditar);
+    dadosContainer.appendChild(hr);
+  }
+}
 
-        exibirDados();
+// Atualizar a função de excluir informação para utilizar o armazenamento local
+function excluirInformacao(event) {
+  var index = event.target.dataset.index;
+  db.dados.splice(index, 1);
+  salvarDados();
+  exibirDados();
+}
+
+// Atualizar a função de editar informação para utilizar o armazenamento local
+function editarInformacao(event) {
+  var index = event.target.dataset.index;
+  var informacao = db.dados[index];
+  
+  // Preencher os campos do formulário com as informações existentes
+  document.getElementById('titulo').value = informacao.titulo;
+  document.getElementById('descricao').value = informacao.descricao;
+  
+  // Definir o índice de edição
+  editarIndex = index;
+  
+  // Abrir o modal de edição
+  modalTitle.textContent = "Editar Notícia";
+  modalForm.style.display = "block";
+}
+
+  document.getElementById('')
+
+</script>
+
+
+
+
+
+
+
+
+
+
 
     </script>
 
