@@ -19,7 +19,7 @@ RF-01 -
 
 Artefatos da funcionalidade 
 
-Hiome-page.html 
+Home-page.html 
 
 Base.js 
 
