@@ -1,3 +1,7 @@
 # Apresentação da Solução
 
- <video src="Apresenta%C3%A7%C3%A3o-site.mp4" controls title="Title"></video> 
+<a href="presentation\Apresentação-site.mp4"> Orientações sobre os artefatos de apresentação do projeto</a>
+
+Faça uma apresentação resumida de todo o projeto, desde a contextualização até a solução final desenvolvida, usando um pequeno vídeo.
+
+Faça o upload do arquivo de vídeo e dos slides usados na apresentação no formato PDF (caso tenha feito uso de slides).
