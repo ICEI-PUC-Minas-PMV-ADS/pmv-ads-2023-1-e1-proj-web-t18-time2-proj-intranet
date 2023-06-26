@@ -54,6 +54,6 @@ Link para o Site: (https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2023-1-e1-pr
 # Armazenamento da Apresentação
 
 * <a href="">Apresentação da solução</a>
-<a>[Intranet.pptx](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t18-time2-proj-intranet/files/11861430/Intranet.pptx) <a>
+
 
 
